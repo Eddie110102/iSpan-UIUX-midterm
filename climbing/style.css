@@ -1,0 +1,924 @@
+
+    :root{
+        --color-white:#FAF9DB;
+        --color-yellow1:#F8F196;
+        --color-yellow2:#F5DE65;
+        --color-yellow3:#F5CB91;
+        --color-yellow4:#FFC65E;
+        --color-yellow5:#F7AC25;
+        --color-pink1:#F7D6EB;
+        --color-pink2:#F5AED0;
+        --color-pink3:#EB8EBB;
+        --color-pink4:#EA7494;
+        --color-blue1:#A1D6F6;
+        --color-blue2:#7ACCE4;
+        --color-blue3:#6FA0D3;
+        --color-blue4:#045E9E;
+        --color-green1:#B5DDC2;
+        --color-green2:#4EC8B1;
+        --color-brain:#8F6C4D;
+    }
+    *{
+        font-family:'Noto Sans TC',  'Dela Gothic One','DotGothic16';
+        outline: #045E9E;
+    }
+    .container{
+        max-width: 960px;
+    }
+
+
+    ::-webkit-scrollbar {
+        display: none;
+        /* 隱藏滾輪 */
+    }
+
+    body{
+        /* background-image:  url(images/bg.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position:  center top; */
+        overflow: hidden;
+        /* 畫面一開始不給滑動 */
+    }
+    .papa{
+        background-image:  url(images/bg.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position:  center top;
+        
+        
+        
+    }
+    
+    .ff-16bit{
+        font-family: 'DotGothic16';
+    }
+    .fs-7{
+        font-size: 12px;
+    }
+
+    .color_darkblue{
+        color: #045E9E;
+    }
+    .color_pink{
+        color: #EA7494;
+    }
+    .w-15{
+        width: 15%;
+    }
+    .box_shadow{
+        box-shadow: 0 5px 10px #ac4d669c;
+    }
+    
+
+    /* --------------------------------手機版----------------------------------- */
+    @media screen and (max-width:992px) {
+        #sec1,#sec2,#sec3{
+            opacity: 0;
+        }
+
+        .mb-200px{
+            margin-bottom: 100px;
+        }
+        nav{
+
+            display: none;
+            width: 100%;
+            height: auto;
+            justify-content: space-between;
+            padding: 10px 15px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 50;
+            color: var(--color-white);  
+            transition: 0.5s;
+            opacity: 0;
+            animation: navshow 1s  forwards;
+            
+        }
+        @keyframes navshow {
+            50%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+            
+        }
+        
+        .climbing_type{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .icon_down{
+            margin: auto;
+        }
+
+        .climbing_type_box{
+            width: 60% !important;
+            right: 15%;
+            bottom: 8%;
+        }
+        .climbing_type_box h2{
+            font-size: 1rem;
+        }
+        .climbing_type_box p{
+            font-size:8px;
+        }
+        .sticker_card{
+            aspect-ratio: 1/2.5;
+            background-image: url(images/sticker_sm_body.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .sticker{
+            position: absolute;
+        }
+        #sticker_helmet{
+            width: 25%;
+            top: 10%;
+            left: 25%;
+        }
+        #sticker_harness{
+            width: 35%;
+            top: 33%;
+            left:50%;
+        }
+
+        #sticker_chalkbag{
+            width: 20%;
+            top: 43%;
+            left: 20%;
+        }
+        #sticker_shoes{
+            top: 73%;
+            left: 40%;
+            width: 50%
+        }
+        .gym_card{
+            background-color: #FAF9DB;
+            margin: auto;
+            padding: 40px;
+            position: relative;
+            border-radius: 20px;
+            box-shadow: 0 5px 10px #ac4d669c;  
+            
+        }
+        .gym_current_info{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+        .gym_photo{
+            width: 80%;
+            aspect-ratio: 4/3;
+            /* position: absolute; */
+            /* top: -10%; */
+            /* left:50%; */
+            /* transform: translateX(-50%); */
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 10px #b3b3b39c;
+        }
+        .gym_info{
+            color: #045E9E;
+            margin-top: 10px;
+        }
+        .gym_name{
+            height: 60px;
+            
+        }
+        .gym_addresses, .gym_time{
+            height: 48px;
+        }
+        .menu_a_group{
+            display: none;
+        }
+        .my_toast{
+            width:70%;
+            background-color: var(--color-white);
+            border-radius: 10px;
+            position: fixed;
+            right: 3%;
+            bottom:5%;
+            padding: 10px 15px;
+            box-shadow: 5px 5px 5px #42a794;
+            display: none;
+        
+        }
+        .my_toast p{
+            margin: 0;
+            font-size: 0.8rem;
+            letter-spacing: 0.5px;
+        }
+
+            
+
+    }
+    /* -------------------------電腦版------------------------------------ */
+    @media screen and (min-width:992px) {
+        /* 為了滑動淡入效果 */
+        .sec_one_title,.sec_one_content,.sec_two_title,.sec_two_content,.sec_three_title,.sec_three_content{
+            opacity: 0;
+        }
+
+        .modal-dialog{
+            max-width: 920px;
+        }
+        .modal-content {
+            background-color: transparent;
+            border: none;
+        }
+        .modal-footer{
+            border: none;
+            justify-content: center;
+        }
+        .mb-200px{
+            margin-bottom: 200px;
+        }
+        nav{
+            background-color: var(--color-pink3);
+            display: none;  
+            padding: 15px 20px;
+            border-radius: 0 0 15px 15px;
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 5px 10px #ac4d669c;
+            z-index: 50;
+            transition: 0.5s;
+            opacity: 0;
+            /* animation: navshow 1s  forwards;   */
+        }
+        @keyframes navshow {
+            50%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        .climbing_type_box{
+            right: 5%;
+            bottom: 14%;
+        }
+        .sticker_card{
+            aspect-ratio: 6/7;
+            background-image: url(images/sticker_lg_body.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .sticker{
+            /* height: 200px; */
+            width: 20%;
+            position: absolute;
+            z-index: 10;
+        }
+        #sticker_helmet{
+            width: 18%;
+            top:27%;
+            left: 25%;
+            transform: rotate(-50deg);
+        }
+        #sticker_harness{
+            width: 30%;
+            top: 27%;
+            left:50%;
+        }
+
+        #sticker_chalkbag{
+            width: 10%;
+            top: 60%;
+            left: 20%;
+        }
+        #sticker_shoes{
+            width: 35%;
+            top: 63%;
+            left: 50%;
+            
+        }
+        .w-lg-50{
+            width: 50% !important; 
+        }
+        .w-lg-25{
+            width: 25% !important;
+        }
+        .w-lg-60{
+            width:60% !important;
+        }
+        .gym_card{
+            background-color: #FAF9DB;
+            margin: auto;
+            padding: 60px  ;
+            position: relative;
+            border-radius: 20px;
+            box-shadow: 0 5px 10px #ac4d669c;  
+        }
+
+        .gym_current_info{
+            display: flex;
+            /* align-items: center; */
+            justify-content: space-around;
+            margin-bottom: 20px;
+
+        }
+        .gym_photo{
+            width: 50%;
+            aspect-ratio: 4/3;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 10px #b3b3b39c;
+        }
+        .gym_info{
+            margin-left: 10px;
+            color: #045E9E;
+        }
+        .gym_name{
+            height: 60px;
+        }
+        .gym_time{
+            height: 48px;
+        }
+        .my_toast{
+            width: 15%;
+            background-color: var(--color-white);
+            border-radius: 10px;
+            position: fixed;
+            right: 3%;
+            bottom:2%;
+            padding: 10px 15px;
+            box-shadow: 5px 5px 5px #42a794;
+            display: none;
+        
+        }
+        .my_toast p{
+            margin: 0;
+            font-size: 0.8rem;
+            letter-spacing: 0.5px;
+        }
+    }
+
+
+
+
+
+    .upper{
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        /* background-image:url(images/logo.svg); */
+        /* background-size: contain ;
+        background-repeat: no-repeat ;
+        background-position: center top ; */
+        z-index: 10;
+        padding-top: 80px;
+        
+        
+    }
+    .upper::after{
+        content: '';
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image:url(images/logo.svg);
+        background-size: contain ;
+        background-repeat: no-repeat ;
+        background-position: center top ;
+        z-index: 10;
+        padding-top: 80px;
+        animation: logo_dis 2s  forwards;
+        pointer-events: none;
+        
+    }
+    @keyframes logo_dis {
+        50%{
+            
+            opacity: 1;
+        }
+
+        100%{
+            opacity: 0;
+        }
+        
+    }
+
+    .start_rope{
+        position: absolute;
+        width: 300px;
+        pointer-events: none;
+        z-index: 30;
+        user-select: none;
+        
+    }
+    
+    .carabiner_outside{
+        padding-top: 80px;
+    }
+
+    .carabiner{
+        background: url(images/carabiner.svg) no-repeat center top;
+        width: 100%;
+        height: 250px;
+        position: relative;
+        z-index: -6;
+        /* 
+        pointer-events: none 的意思是讓該元素被穿透, 不會觸發滑鼠作用(像點擊)
+        carabiner_check 被包在 carabiner 裡面 
+        如果 carabiner 設定被穿透, 包在裡面的 carabiner_check 應該也會被穿透
+        那點擊了就會沒有作用
+        */
+        /* pointer-events: none; */
+    }
+    .carabiner_check{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px dashed #fff;
+        color: #fff;
+        line-height: 45px;
+        text-align: center;
+        animation: clickBtn 2s ease-in-out infinite ,turnrun 3s linear infinite;
+    
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-30%, -10px);
+        /* 
+        carabiner_check 要點擊了才會觸發掛繩, 所以他不能被穿透
+        */
+        /* pointer-events: none; */
+        /* 
+        z-index 改成 20 才能被點到 
+        */
+        z-index: 20;
+    }
+    .carabiner_check p{
+        letter-spacing: 1px;
+        animation: turnback 3s linear infinite;
+        user-select: none;
+    }
+    @keyframes clickBtn {
+        0% ,100%{
+            opacity: 0;
+        }
+        50%{
+            opacity: 1;
+        }     
+    }
+    @keyframes turnrun {
+        0% {
+            transform:translate(-30%, -10px) rotate(0deg);
+        }
+        50%{
+            transform:translate(-30%, -10px) rotate(180deg);
+        }
+        100%{
+            transform:translate(-30%, -10px) rotate(360deg);
+        }
+    }
+    @keyframes turnback {
+        0% {
+            transform: rotate(0deg);
+        }
+        50%{
+            transform: rotate(-180deg);
+        }
+        100%{
+            transform: rotate(-360deg);
+        }
+    }
+
+    
+
+
+    .real_vk{
+        position: absolute;
+        top:0;
+        height: 100vh;
+        width: 100%;
+        /* overflow: hidden; */
+        background-image:url(images/logo_big_white.svg);
+        background-size: contain ;
+        background-repeat: no-repeat ;
+        background-position: center top ;
+    }
+    
+    .rope_box{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        /* overflow-x: hidden; */
+        /* overflow-y: auto; */
+        position: sticky !important;  
+        top: 0px;
+        transform: translateY(-3%) ;
+        opacity: 0;
+        z-index: -5;
+    }
+    
+    .rope_self{
+        transform:scaleY(1.1) ;
+        transform-origin: top center;
+        display: flex;
+        
+    }
+    .rope_self img{
+        margin: 0 auto;
+        height: 1000px;
+    }
+    .rope_straight{
+        position: absolute;
+        width: 15px;
+        transform:translateY(1.5%) scaleY(1.5)  rotate(-45deg)  ;
+        transform-origin: top left;
+        top: 0;
+        left: 50%;
+        z-index: -1;
+        /* animation: translateY  1s linear infinite; */
+    }
+    
+
+    /* ----------------------nav----------------------------------------------------- */
+   
+
+    nav a{
+        color: #fff;
+        font-family: 'DotGothic16';
+        letter-spacing: 1px;
+        text-decoration: none;
+    }
+    nav a:visited ,nav a:hover,nav a:active{
+        color: #fff;
+        text-decoration: underline;
+    }
+    /* --------------------sec1 competition--------------------- */
+    
+    
+
+    .window_fram{
+        width: 100%;
+        height: auto;
+    }
+    
+    .icon_down{
+        opacity: 0;
+        transition: 0.3s;
+    }
+    .climbing_type:hover .icon_down{
+        opacity: 1;
+    }
+
+    .floder_speed{
+        transform: translateX(15%);
+    }
+    .floder_lead{
+        transform: translateX(55%);
+    }
+    
+
+    /* -------------------------sec2 equipment------------------------------------- */
+ 
+    .sticker_game_prepare{
+        background: url(images/sticker_game_mask.svg),url(images/sticker_game.svg)  ;
+        background-size: contain ,contain;
+        background-repeat: no-repeat ,no-repeat;
+        background-position: center center ,center center;
+        position: relative;
+        transition: .3s;
+    }
+    .sticker_game{
+        background-image: url(images/sticker_game.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center ;
+        position: relative;
+        transition: .3s;
+    }
+    
+    .game_btn{
+        width: 20%;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        background-color: transparent;
+        border:#045E9E 2px dashed;
+       
+        /* transition: .5s; */
+    }
+    .game_btn span{
+        color: var(--color-blue4);
+    }
+    
+    .game_btn:hover {
+        animation: turnrun2 5s linear infinite;
+        background-color: var(--color-white);
+        box-shadow: 5px 5px 5px #ccc;
+    }
+    .game_btn:hover span{
+        display: block;
+        animation: turnback 5s linear infinite;
+    }
+    @keyframes turnrun2 {
+        0% {
+            transform: rotate(0deg);
+        }
+        50%{
+            transform:rotate(180deg);
+        }
+        100%{
+            transform:rotate(360deg);
+        }
+    }
+    #sticker_game_area{
+        justify-content: center;
+        align-items: center;
+    }
+    .notion{
+        position: static;
+        z-index: 20;
+        display: none;
+        transition: .3s;
+
+
+    }
+    
+    .sticker{
+        z-index: 10;
+    }
+
+    .sticker_ans{
+        width: 50px;
+        height: 50px;
+        /* background-color: #045E9E; */
+        position: absolute;
+    }
+    #ans_helmet{
+        top: 30%;
+        left: 30%;
+    }
+    #ans_harness{
+        top: 55%;
+        left: 50%;
+    }
+    #ans_chalkbag{
+        top: 55%;
+        left: 35%;
+    }
+    #ans_shoes{
+        top: 80%;
+        left: 50%;
+    }
+    /* -----------------------------sec3 gym-------------------------------------- */
+  
+    .gym_info h4{
+        font-family:'Noto Sans TC' ;
+        font-weight: 800;
+        letter-spacing: 1px;  
+    }
+    .gym_info p{
+        margin-bottom: 0.5rem;
+    }
+    .page_dot_box{
+        display: flex;
+        justify-content: center;
+    }
+    .page_dot{
+        width: 1rem;
+        height: 1rem;
+        background-color: #F5AED0;
+        border-radius: 50%;
+        margin: 2px 8px;
+    }
+    .page_dot:nth-child(1){
+        background-color: var(--color-pink4)
+    }
+    .location_btn img{
+        pointer-events: none;
+
+    }
+    /* .location_btn:nth-child(1){
+        background-image: url(images/tag.svg);
+        background-repeat: no-repeat;
+        background-position: bottom center;
+    } */
+    /* .location_btn_bg{
+        background-image: url(images/tag.svg);
+        background-repeat: no-repeat;
+        background-position: bottom center;
+    } */
+    .location_btn{
+        position: relative;
+    }
+    .btn_tag{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: none;
+    }
+    
+    .btn-local{
+        position: relative;
+        z-index: 1;
+    }
+   .gym_card_btn{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    
+   }
+   .left_btn , .right_btn{
+    width: 10%;
+    pointer-events:all;
+    transition: 0.5s;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+   .left_btn i, .right_btn i{
+    font-size: 1.8rem;
+    color: var(--color-yellow5);
+    transition: 0.3s;
+   }
+   .left_btn:hover i, .right_btn:hover i{
+    color: var(--color-green2);
+   }
+ 
+    /* ----------------marquee mobile- 水平跑馬燈------------------ */
+    .horizontalline {
+        
+        background: url(images/marquee_horizontal.svg) repeat-x  1px 0;
+        background-size: 200% ;
+        height:3vh;
+        width: 100%;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        animation: line-move 15s linear infinite 0s;
+        display: flex;
+        z-index: 90;
+        
+    }
+
+    .horizontalline2 {
+        background:url(images/marquee_horizontal.svg) repeat-x  1px 0;
+        background-size: 200%;
+        height:3vh;
+        width: 100%;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        animation: line-move2 15s linear infinite 0s;
+        display: flex;
+        z-index: 90;
+        
+    
+    }
+    @keyframes line-move{
+            from{transform: translateX(0%)}
+            to{transform: translateX(100%)}}
+
+    @keyframes line-move2{
+            from{transform: translateX(-100%)}
+            to{transform: translateX(0%)}}
+
+    /* -----------------------marquee------------------------------------ */
+    .both_line{
+        padding: 0;
+    }
+    .leftline {
+        
+        background: url(images/marquee_vertical.svg) repeat-y  1px 0;
+        background-size: 3vw ;
+        width:3vw;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        animation: low-code-move 15s linear infinite 0s;
+        display: flex;
+        flex-direction: column;
+        z-index: 90;
+    }
+
+    .leftline2 {
+        background:url(images/marquee_vertical.svg) repeat-y  1px 0;
+        background-size: 3vw;
+        width: 3vw;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        animation: low-code-move2 15s linear infinite 0s;
+        display: flex;
+        flex-direction: column;
+        z-index: 90;
+    
+    }
+    .rightline{
+        background:url(images/marquee_vertical.svg) repeat-y  7px 0;
+        background-size: 3vw;
+        width: 3vw;
+        position: fixed;
+        z-index: 90;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        animation: low-code-move 15s linear infinite 0s;
+    }
+    .rightline2{
+        background:url(images/marquee_vertical.svg) repeat-y  7px 0;
+        background-size: 3vw;
+        width:3vw;
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        animation: low-code-move2 15s linear infinite 0s;
+        display: flex;
+        flex-direction: column;
+        z-index: 90;
+        
+    }
+
+
+    @keyframes low-code-move{
+            from{transform: translateY(0%)}
+            to{transform: translateY(100%)}}
+
+    @keyframes low-code-move2{
+            from{transform: translateY(-100%)}
+            to{transform: translateY(0%)}}
+
+/* ------------------footer--------------------------------- */
+footer{
+    background-color: var(--color-green2);
+    padding: 50px 0 100px;
+    position: sticky;
+    bottom: 0;
+    z-index: -1;
+    /* pointer-events: none; */
+}
+.my-info p, .social a{
+    color: var(--color-white);
+    
+}
+.social a{
+    margin-left: 0.5rem;
+}
+
+.arrow {
+    text-align: end;
+    padding: 10px 15px;
+}
+.arrow p{
+    right: 10%;
+    top: -5%;
+    padding: 0;
+    color: var(--color-white);
+}
+
+input{
+    border: #FAF9DB solid 2px;
+    border-radius: 30px ;
+    font-size: 1rem;
+    color: #045E9E;
+    background-color: transparent;
+    padding: 0 0 5px 13px;
+    width: 100%;
+    position: relative;
+    
+
+}
+input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--color-blue4);
+    font-size: 0.5rem;
+    opacity: 0.5; 
+} 
+.footer_btn{
+    border: #FAF9DB solid 3px;
+    border-radius: 30px;
+    background-color: #FAF9DB;
+    padding: 5px 20px;
+    font-size: 0.5rem;
+    color: #045E9E;
+    right: 0;
+    transition: 0.3s;
+}  
+.footer_btn:hover{
+    border: var(--color-blue4) solid 3px;
+    background-color: var(--color-blue4);
+    color: var(--color-white);
+}

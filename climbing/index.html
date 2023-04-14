@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小岩究</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=DotGothic16&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>   
+    <!-- <link href="draganddrop.css" rel="stylesheet">
+    <script src="draganddrop.js"></script>
+    <script src="./js/jquery-3.6.3.min.js"></script> -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <style>
+        .mobile_menu{
+            height: 30%;
+            background-color: #4EC8B1;
+            flex-direction: column;
+            /* background-image: linear-gradient(45deg, #4EC8B1,#FFC65E ); */
+            align-items: flex-end;
+        }
+        .fa-xmark{
+            display: none;
+        }
+        .menu_a{
+            display: none;
+        }
+        .menu_a_grop_show{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+      
+        .back_btn{
+            color: var(--color-white);
+            border: 2px solid var(--color-white);
+            width: 50%;
+            padding: 1% 2%;
+            border-radius: 30px;
+            margin: auto;
+        }
+        .modal-dialog{
+            max-width: 600px;
+        }
+        .modal-content{
+            background-color: transparent;
+            border: none;
+
+        }
+        .window_shadow{
+            box-shadow: 10px 10px 10px #4b4b4b9c;
+        }
+        .modal-footer{
+            border: none;
+        }
+        .hide_nav {
+            transform: translateX(-50%) translateY(-100px) ;
+            
+        }
+
+    </style>
+        
+
+   
+</head>
+<body>
+    <div class="papa position-relative">
+        <nav class="nav_bar animate__animated">
+            <a id="top_logo" class="d-lg-none w-25" href="">
+                <img  src="images/logo.svg" alt="">
+            </a>
+            <div class="menu_btn" id="menu_bar">
+                <i class="fa-solid fa-bars d-lg-none"></i>
+                <i class="fa-solid fa-xmark d-lg-none"></i>
+            </div>
+            <div class="menu_a_group ">
+                <a class="menu_a  ms-2 mb-2 d-lg-inline" href="#topvk">TOP</a>
+                <a class="menu_a  ms-2 mb-2 d-lg-inline" href="#sec1">COMPETITION</a>
+                <a class="menu_a  ms-2 mb-2 d-lg-inline" href="#sec2">EQUIPMENT</a>
+                <a class="menu_a  ms-2 mb-2 d-lg-inline" href="#sec3">GYM</a>
+            </div>
+            
+        </nav>
+        <!-- -------------------nav-------------------------------------- -->
+        <div class="vk upper">
+            <div class="start_rope">
+                <img src="images/rope_start.svg" alt="">
+            </div>   
+            <div class="carabiner">
+                <div class="carabiner_check">
+                    <p>click</p>
+                </div>
+            </div>
+        </div>
+        <div id="topvk" class="real_vk">
+        </div>
+        <div class="carabiner_outside">
+            <div class="carabiner ">
+            </div>
+        </div>
+        <div class=" rope_box ">
+            <div class="rope_self">
+                <img src="images/rope_self.svg" alt="">
+            </div>
+            <div class="rope_straight">
+                <img src="images/rope_straight.svg" alt="">
+            </div>
+        </div>
+        
+       
+        <!-- -----------------------sec1 competition-------------------------------- -->
+        <div id="sec1" class="container competition mb-200px pt-5 animate__animated">
+            <div class="row title mb-3 sec_one_title animate__animated">
+                <div class="col-6 col-lg-4 ">
+                    <img src="images/title_completment_p.svg" alt="">
+                </div>
+                
+            </div>
+            <div class="row sec_one_content animate__animated">
+                <div class="col-12 col-lg-8 position-relative h-auto">
+                    <div class="window_fram">
+                        <img src="images/window_fram_bg.svg" alt="">
+                    </div>
+                    <div class="climbing_type_box w-75 d-flex position-absolute " >
+                        <div id="climbing_type_speed" class="climbing_type text-center" type ="speed" data-bs-toggle="modal" data-bs-target="#exampleModalspeed">
+                            <p class="m-0 ff-16bit fs-7 color_pink">Speed Climbing</p>
+                            <h2 class="ff-16bit color_pink">速度賽</h2>
+                            <img class="w-15 icon_down" src="images/icon_down.svg" alt="">
+                            <img class="w-100" src="images/400x600-speedclimbing2.png" alt="">
+                        </div>
+                        <div id="climbing_type_lead" class="climbing_type text-center" type ="lead" data-bs-toggle="modal" data-bs-target="#exampleModallead">
+                            <p class="m-0 ff-16bit fs-7 color_pink">Lead Climbing</p>
+                            <h2 class="ff-16bit color_pink">先鋒賽</h2>
+                            <img class="w-15 icon_down" src="images/icon_down.svg" alt="">
+                            <img class="w-100" src="images/400x600-sportclimbing.png" alt="">
+                        </div>
+                        <div id="climbing_type_bouldering" class="climbing_type text-center" type ="bouldering" data-bs-toggle="modal" data-bs-target="#exampleModalbouldering">
+                            <p class="m-0 ff-16bit fs-7 color_pink">Bouldering</p>
+                            <h2 class="ff-16bit color_pink">抱石賽</h2>
+                            <img class="w-15 icon_down" src="images/icon_down.svg" alt="">
+                            <img class="w-100" src="images/400x600-bouldering.png" alt="">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-lg-3 d-none  d-lg-flex d-flex flex-column justify-content-between">
+                <div class="floder floder_speed mt-5 text-center ">
+                    <img class="w-50 " src="images/pink_floder.png" alt="">
+                    <p class="ff-16bit fs-5 color_darkblue">Speed Climbing</p>
+                </div>
+                <div class="floder floder_lead  text-center">
+                    <img class="w-50" src="images/pink_floder.png" alt="">
+                    <p class="ff-16bit fs-5 color_darkblue">Lead Climbing</p>
+                </div>
+                <div class="floder floder_boul mb-5  text-center">
+                    <img class="w-50" src="images/pink_floder.png" alt="">
+                    <p class="ff-16bit fs-5 color_darkblue">Bouldering</p>
+                </div>
+                </div>
+            </div>
+        </div>
+        <!-- ---------------------------sec2 equipment--------------------------------- -->
+        <div id="sec2" class="container sec_equipment mb-200px pt-5 animate__animated">
+            <div class="row sec_two_title animate__animated title mb-3">
+                <div class="col-6 col-lg-4 ">
+                    <img  src="images/title_equipment_p.svg" alt="">
+                </div>
+            </div>
+            <div class="row sec_two_content animate__animated">
+                <div class="col-12 col-lg-6 sticker_card d-flex position-relative">
+                    <div class="sticker " id="sticker_helmet">
+                        <img  src="images/sticker_helmet.svg" alt="">                    
+                    </div>
+                    <div class="sticker " id="sticker_harness">
+                        <img  src="images/sticker_harness.svg" alt="">
+                    </div>
+                    <div class="sticker " id="sticker_chalkbag">
+                        <img src="images/sticker_chalkbag.svg" alt="">
+                    </div>
+                    <div class="sticker" id="sticker_shoes">
+                        <img src="images/sticker_shoes.svg" alt="">
+                    </div>
+                </div>
+
+                <div id="sticker_game_area" class="d-none d-lg-flex col-lg-6  sticker_game_prepare">
+                    <button class="game_btn  animate__animated">
+                        <span >Start <br> Game </span> 
+                    </button>
+                    <div class="notion text-center animate__animated">
+                        <img class="mission_card w-100  " src="images/mission.svg" alt="">
+                    </div>
+                    <div id="ans_helmet" class="sticker_ans d-none d-lg-block" space="null"></div>
+                    <div id="ans_harness" class="sticker_ans d-none d-lg-block" space="null"></div>
+                    <div id="ans_chalkbag" class="sticker_ans d-none d-lg-block" space="null"></div>
+                    <div id="ans_shoes" class="sticker_ans d-none d-lg-block" space="null"></div>
+                </div>
+
+            </div>
+        </div>
+    <!-- ------------------------------sec3 gym------------------------------------ -->
+        <div id="sec3" class="container sec_gym pb-5 pt-5 animate__animated">
+            <div class="row sec_three_title animate__animated title mb-3">
+                <div class="col-6 col-lg-4">
+                    <img  src="images/title_gym_p.svg" alt="">
+                </div>
+            </div>
+            <div class="row sec_three_content animate__animated">
+                <div class="col-12 col-lg-3 d-flex flex-lg-column justify-content-around ps-lg-5">
+                    <div class="location_btn location_btn_bg animate__animated" local="north">
+                        <img class="btn-local w-75  w-lg-60" src="images/gym_north_b.svg" alt="">
+                        <img class="btn_tag animate__animated" style="display:block" src="images/tag.svg" alt="">
+                    </div>
+                    <div class="location_btn " local="middle">
+                        <img class="btn-local w-75 w-lg-60" src="images/gym_middle_b.svg" alt="">
+                        <img class="btn_tag animate__animated" src="images/tag.svg" alt="">
+                    </div>
+                    <div class="location_btn  animate__animated" local="south">
+                        <img class="btn-local w-75  w-lg-60" src="images/gym_south_b.svg" alt="">
+                        <img class="btn_tag animate__animated" src="images/tag.svg" alt="">
+                    </div>
+                    <div class="location_btn  animate__animated" local="east">
+                        <img class="btn-local w-75  w-lg-60" src="images/gym_east_b.svg" alt="">
+                        <img class="btn_tag animate__animated" src="images/tag.svg" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-9 mt-5">
+                    <div class="gym_card  mx-4 mt-3">
+                        <div class="gym_current_info animate__animated">
+                            <div class="gym_photo">
+                                <img class="w-100 h-100" src="images/gym_photo_mega.jpg" alt="">
+                            </div>
+                            <div class="gym_info mb-3">
+                                <h4 class="gym_name">MegaSTONE Climbing Gym</h4>
+                                <p class="gym_addresess">新北市新莊區中正路56巷5號</p>
+                                <p class="gym_phone">02-8992-8991</p>
+                                <p class="gym_time">平日14:00~22:00 <br>假日11:00~19:00</p>
+                                <div class="icon">
+                                    <a class="text-decoration-none color_darkblue" href="https://www.facebook.com/MegaSTONE20190601/">
+                                         <i class="fa-brands fa-facebook"></i>
+                                    </a>
+                                   <a class="text-decoration-none color_darkblue" href="https://goo.gl/maps/P7hatbqo3ahqdzJv6">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                   </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page_dot_box">
+                            <div class="page_dot"></div>
+                            <div class="page_dot"></div>
+                            <div class="page_dot"></div>
+                            <div class="page_dot"></div>
+                            <div class="page_dot"></div>
+                        </div>
+                        <div class="gym_card_btn">
+                            <div class="left_btn"><i class="fa-solid fa-caret-left"></i></div>
+                            <div class="right_btn"><i class="fa-solid fa-caret-right"></i></div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    <!-- --------------------------marquee-跑馬燈--------------------- -->
+    <!-- 手機水平跑馬燈 -->
+        <section class="marquee_h  d-lg-none" >     
+            <div class="horizontalline"></div>
+            <div class="horizontalline2"></div>
+        </section>    
+
+    <!-- 電腦垂直跑馬燈 -->
+        <section class="both_line d-none d-lg-block" id="both_line">
+                
+            <div class="leftline"></div>
+            <div class="leftline2"></div>
+            
+            <div class="rightline"></div>
+            <div class="rightline2"></div>
+        </section>
+    
+    </div>   
+    <!-- ----------------------footer---------------------------- -->
+    <footer  >
+        <div class="container">
+            <div class="row">
+                <img class="w-50 w-lg-25" src="images/logo.svg" alt="">
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-4 my-info">
+                    <p class="ff-16bit fs-7 m-1">Made By Peng,Shao-Tzu</p>
+                    <p class="ff-16bit fs-7 m-1">A Website About Climbing  </p>
+                    <p class="ff-16bit fs-7 m-1"> lolialice1217@gmail.com</p>
+                    <div class="social">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-8">
+                    <div class="arrow position-relative">
+                        <p class="position-absolute fs-7 ff-16bit">Contact Us</p>
+                        <img class="w-50" src="images/icon_arrow_white.svg" alt="">
+                    </div>
+                    <div class="email d-flex position-relative">
+                        <input class="ff-16bit email_input" type="text" placeholder="your e-mail" >
+                        <button class="footer_btn ff-16bit position-absolute">Subscr Now!</button>
+                        <div class="my_toast animate__animated">
+                            <h6 class=" color_pink">Succeed!</h6>
+                            <p class=" color_darkblue">We have received your e-mail , please wait patiently for contact!</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </footer> 
+    <!-- -------------------------彈跳視窗------------- -->
+    
+    <!-- ------------------------------speed Modal -->
+    <div class="modal fade" id="exampleModalspeed" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body d-lg-flex">
+                <div class="climbing_text  text-center my-5 w-lg-50 pe-lg-2">
+                    <img class="  window_shadow" src="images/text_speed.svg" alt="">
+                </div>
+                <div class="climbing_photo  text-center mb-5 w-lg-50 ps-lg-2">
+                    <img class="  window_shadow" src="images/window_speed.svg" alt="">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="back_btn text-center mb-5 window_shadow w-25" data-bs-dismiss="modal">
+                    <img id="back_arrow" class=" w-100" src="images/back_arrow_white.svg" alt="">
+                </div>
+            </div>
+            
+        </div>
+        </div>
+    </div>
+    <!-- -----------------lead climbing------------------------ -->
+    <div class="modal fade" id="exampleModallead" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body d-lg-flex">
+                <div class="climbing_text  text-center my-5 w-lg-50 pe-lg-2">
+                    <img class="  window_shadow" src="images/text_lead.svg" alt="">
+                </div>
+                <div class="climbing_photo  text-center mb-5 w-lg-50 ps-lg-2">
+                    <img class="  window_shadow" src="images/window_lead.svg" alt="">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="back_btn text-center mb-5 window_shadow w-25" data-bs-dismiss="modal">
+                    <img id="back_arrow" class=" w-100" src="images/back_arrow_white.svg" alt="">
+                </div>
+            </div>
+            
+        </div>
+        </div>
+    </div>
+    <!-- --------------------------bouldering--------------------------------- -->
+    <div class="modal fade" id="exampleModalbouldering" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body d-lg-flex">
+                <div class="climbing_text  text-center my-5 w-lg-50 pe-lg-2">
+                    <img class="  window_shadow" src="images/text_bouldering.svg" alt="">
+                </div>
+                <div class="climbing_photo  text-center my-5 w-lg-50 ps-lg-2">
+                    <img class="  window_shadow" src="images/window_bouldering.svg" alt="">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="back_btn text-center mb-5 window_shadow w-25" data-bs-dismiss="modal">
+                    <img id="back_arrow" class=" w-100" src="images/back_arrow_white.svg" alt="">
+                </div>
+            </div>
+            
+        </div>
+        </div>
+    </div>
+
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="./js/jquery-3.6.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
+
+    
+
+    
+    <script>
+
+
+        // 畫面重整回到最上方
+        $('html,body').animate({
+            scrollTop:0,
+            screenLeft:0,
+        },0)
+
+        
+    
+
+        // 滑鼠牽繩
+        let  offsetX = null
+        let  offsetY = null
+   
+        // $(function(){
+        //     if($(window).width()>992){
+               $('.upper').mousemove(function(e){
+                    // console.log('e.offsetX', e.offsetX)
+                    // console.log('e.offsetY', e.offsetY)
+
+                    // 改成抓整個 page 的座標, 才不會被上層的 div 影響到
+                    // console.log('e.pageX', e.pageX)
+                    // console.log('e.pageY', e.pageY)
+
+                    // var husband = ['Jace', '曾皓', '我老公'];
+                    // var adjective = ['年輕的帥哥', '可愛的男孩'];
+                    // console.log(husband[Math.floor(Math.random()*3)] + '是' + adjective[Math.floor(Math.random()*2)]);
+
+                    pageX = e.pageX
+                    pageY = e.pageY
+
+                    // 動態抓圖片的寬度並且除以2, 讓滑鼠在繩子頂端
+                    pageX = pageX - ($('.start_rope').width()/2)
+                    pageY = pageY -80
+                    $('.start_rope').css('transform', `scaleY(1.1) translate(${pageX}px,${pageY}px)`)
+                
+                }) 
+        //     }
+        // })
+
+        
+        // 主視覺點擊後掛繩
+                
+        $('.carabiner_check').click(function(){
+            $('.upper').css('display', 'none')
+            $('body').css('overflow', 'auto')
+            $('.rope_box').css('opacity','1')
+            $('.papa').css('z-index','1')
+            $('footer').css('z-index','auto')
+            $('.nav_bar').css('display','flex')
+            
+            if($(window).width()>992){
+                $('.nav_bar').css('display','flex')
+                setTimeout(
+                function(){
+                    $('.nav_bar').css('opacity', '1')
+                } , 100
+                )
+            }else{
+                
+            }
+        })
+
+        // ---------------手機版本選單開啟-----------------------
+        let menu = true
+        console.log($(window).width())
+        if ($(window).width()<=992){
+            $('#menu_bar').click(function(){
+                if(menu == true){
+                $('nav').addClass('mobile_menu')
+                $('.menu_a_group').addClass('menu_a_grop_show')
+                $('#top_logo').css('display', 'none')
+                $('#top_logo').css('order','3')
+                $('.fa-bars').css('display','none')
+                $('.fa-xmark').css('display','inline')
+                $('.menu_a').css('display','inline')
+                $('.menu_a_group').show()
+                menu = false
+                }else{
+                    menu = true
+                    $('nav').removeClass('mobile_menu')
+                    $('.menu_a_group').removeClass('menu_a_grop_show')
+                    $('#top_logo').css('display', 'block')
+                    $('#top_logo ').css('order','0')
+                    $('.fa-bars').css('display','inline')
+                    $('.fa-xmark').css('display','none')  
+                    $('.menu_a ').css('display','none')
+                    $('.menu_a_group').hide()
+                }   
+            })
+        }
+        // -----------------手機版本選單。點選後。選單自動消失----------------
+        $('.menu_a_group').click(function(){
+            if($('nav').attr('class')=='nav_bar mobile_menu'){
+            console.log(222222222)
+            $('nav').removeClass('mobile_menu')
+            $('.menu_a_group').removeClass('menu_a_grop_show')
+            $('#top_logo').css('display', 'block')
+            $('#top_logo ').css('order','0')
+            $('.fa-bars').css('display','inline')
+            $('.fa-xmark').css('display','none')  
+            $('.menu_a ').css('display','none')
+            }else{
+                console.log(2333333333333)
+                $('nav').removeClass('mobile_menu')
+            $('.menu_a_group').removeClass('menu_a_grop_show')
+            $('#top_logo').css('display', 'block')
+            $('#top_logo ').css('order','0')
+            $('.fa-bars').css('display','inline')
+            $('.fa-xmark').css('display','none')  
+            $('.menu_a ').css('display','none')
+            }
+        })  
+        // ---------------------------sticker game-----------------------------
+        // ---------開啟遊戲
+        
+        $('.game_btn').click(function(){
+            
+            $('#sticker_game_area').removeClass('sticker_game_prepare').addClass('sticker_game')
+            $('.game_btn').hide()
+            $('.notion').show()
+            bounceIn()
+            $('#sticker_helmet').css({'width': '18%','top':'27%','left': '25%','transform': 'rotate(-50deg)'})
+            $('#sticker_harness').css({'width': '30%','top': '27%','left':'50%',})
+            $('#sticker_chalkbag').css({'width': '10%','top': '60%','left': '20%',})
+            $('#sticker_shoes').css({'width': '35%','top': '63%','left': '50%',})
+        })
+        // -----------關閉任務卡----------
+        $('.notion').click(function(){
+            bounceOut()
+            // $('.notion').hide()
+
+            // ----------------黏貼貼紙
+            $(function(){
+                let helmet_complete = false
+                let harness_complete = false
+                let chalkbag_complete = false
+                let shoes_complete = false
+                    $( "#sticker_helmet").draggable({ revert: "invalid" });
+                    $( "#sticker_harness").draggable({ revert: "invalid" });
+                    $( "#sticker_chalkbag").draggable({ revert: "invalid" });
+                    $( "#sticker_shoes").draggable({ revert: "invalid" });
+
+
+                    // invalid 會彈回原處
+                
+                    $( "#ans_helmet" ).droppable({
+                    accept: "#sticker_helmet",
+                    // 辨識可作用者
+
+                    // activeClass: "ui-state-default",
+                    // hoverClass: "ui-state-hover",
+                    // classname 是預先寫好的style
+
+                    drop: function( event, ui ) {
+                        $( this )
+                        .addClass( "ui-state-highlight" )
+                        .attr( "space" ,"full");
+                        $( "#sticker_helmet" ).draggable( "destroy" );
+                        helmet_complete =true;
+                        all_complete_show()
+                    }
+                    });
+
+                    $( "#ans_harness" ).droppable({
+                    accept: "#sticker_harness",
+                    activeClass: "ui-state-default",
+                    hoverClass: "ui-state-hover",
+                    drop: function( event, ui ) {
+                        $( this )
+                        .addClass( "ui-state-highlight" )
+                        .attr( "space" ,"full");
+                        $( "#sticker_harness" ).draggable( "destroy" );
+                        harness_complete = true;
+                        all_complete_show()
+                    }
+                    });
+
+                    $( "#ans_chalkbag" ).droppable({
+                    accept: "#sticker_chalkbag",
+                    activeClass: "ui-state-default",
+                    hoverClass: "ui-state-hover",
+                    drop: function( event, ui ) {
+                        $( this )
+                        .addClass( "ui-state-highlight" )
+                        .attr( "space" ,"full");
+                        $( "#sticker_chalkbag" ).draggable( "destroy" );
+                        chalkbag_complete = true ;
+                        all_complete_show()
+                    }
+                    });
+
+                    $( "#ans_shoes" ).droppable({
+                    accept: "#sticker_shoes",
+                    activeClass: "ui-state-default",
+                    hoverClass: "ui-state-hover",
+                    drop: function( event, ui ) {
+                        $( this )
+                        .addClass( "ui-state-highlight" )
+                        .attr( "space" ,"full");
+                        $( "#sticker_shoes" ).draggable( "destroy" );
+                        shoes_complete = true;
+                        all_complete_show()
+                    }
+                    });
+
+                function all_complete_show(){
+                    if(helmet_complete & harness_complete & chalkbag_complete & shoes_complete ){
+                        $('.mission_card').attr('src','images/mission_clear.svg')
+                        
+                        $('.notion').show()
+                        bounceIn()
+                        
+                        setTimeout(
+                            function(){
+                                bounceOut()
+                            }
+                            ,1000
+                        )
+                        setTimeout(function(){
+                            $('.mission_card').attr('src','images/mission.svg')
+                        },1500)
+                        
+                        setTimeout(function(){
+                            bounceIn_btn()
+                            $('.game_btn').show()
+                                    .css('position','absolute') 
+                                    .css('top','10%')
+                                    .css('left','70%')
+                                    .css('width','10%')
+                                    .css('border-color','#EA7494')
+                                    //   .css('animation',' turnrun2 5s linear infinite')
+                            $('.game_btn span').text('Reset')
+                                                .css('font-size','0.4rem')
+                                                .css('color','#EA7494')
+
+                                        // .css('animation',' turnback 5s linear infinite')
+                        },1500
+                        )
+                    }
+                    }
+            }); 
+        })
+        function bounceIn_btn(){
+            let animate = 'animate__bounceIn' +$(this).text()
+            $('.game_btn').addClass(animate).one('animationend',function(){
+                $(this).removeClass(animate);
+            })
+        }
+        
+
+        function bounceIn(){
+            let animate = 'animate__bounceIn' +$(this).text()
+            $('.notion').addClass(animate).one('animationend',function(){
+                $(this).removeClass(animate);
+            })
+        }
+        function bounceOut(){
+            let animate = 'animate__bounceOut' +$(this).text()
+            $('.notion').addClass(animate).one('animationend',function(){
+                $(this).removeClass(animate).hide();
+            })
+        }
+
+
+        // -------------------------gym slider-----------------
+
+        let northGymArray = [
+            {name :  'MegaSTONE Climbing Gym ',
+            addresses : ' 新北市新莊區中正路56巷5號',
+            phone: '02-8992-8991 ',
+            time: ' 平日 14:30-22:30 <br>週末 10:00-20:00',
+            img : 'images/gym_info/megastone.jpg ',
+            web : 'https://www.facebook.com/MegaSTONE20190601/ ',
+            map : 'https://goo.gl/maps/P7hatbqo3ahqdzJv6'
+            },
+
+            {name :  'double8 岩究所 ',
+            addresses : ' 台北市大同區迪化街一段251號',
+            phone : '02-2550-8081 ',
+            time: ' 平日 13:30-22:00 <br>周末 09:30-18:30',
+            img : 'images/gym_info/double8.jpg ',
+            web : 'https://www.facebook.com/double8tw ',
+            map :'https://goo.gl/maps/rttj6c2wPjXrNppq6'
+            },
+        
+            {name :  'CORNER Bouldering Gym',
+            addresses : '台北市中山區新生北路一段86號 ',
+            phone : '02-2563-3749 ',
+            time: ' 平日 10:00-23:00 <br>週末 09:00-21:00',
+            img : 'images/gym_info/CORNER-Bouldering-Gym.jpg ',
+            web : ' https://www.facebook.com/corner.bouldering/',
+            map :'https://goo.gl/maps/GeMjsPhTuYCNFZkAA'
+            },
+        
+            {name :  '原岩攀岩館-萬華店',
+            addresses : '台北市萬華區大理街149號 ',
+            phone : '02-2308-8250 ',
+            time: '平日 10:00-23:00 <br>週末 09:00-21:00 ',
+            img : 'images/gym_info/t-up.jpg ',
+            web : ' https://www.facebook.com/TupClimbingWanhua/',
+            map :'https://goo.gl/maps/pNDkVpLPVcvqFvUZ6'
+            },
+        
+            {name :  '市民抱石攀岩館 ',
+            addresses : '台北市南港區市民大道八段552號 ',
+            phone : '02-2788-0615 ',
+            time: '營業時間 10:00-22:00',
+            img : 'images/gym_info/taipei_citizn.jpg ',
+            web : ' https://www.facebook.com/CivicBouldergymTaipei/?locale=zh_TW',
+            map :'https://goo.gl/maps/ADPhYHzghGXfBtXu8'
+            }      
+        ]
+        let middleGymArray = [
+            {name :  ' 破舊二場',
+            addresses : ' 台中市烏日區健行路131號',
+            phone : '0968-298876 ',
+            time: '平日 17:30-22:30<br>週末 14:00-22:00 ',
+            img : ' images/gym_info/old2.jpg',
+            web : 'https://www.facebook.com/ShabbyfactoryII/ '
+            },
+
+            {name :  'The Depot City ',
+            addresses : '台中市北屯區敦平二街17號 ',
+            phone : '04-2299-4803 ',
+            time: ' 平日 18:00-23:00<br>週末 13:00-20:00',
+            img : ' images/gym_info/depocity.jpg',
+            web : ' https://www.facebook.com/thedepotcity/'
+            },
+
+            {name :  ' B-plus 攀岩館',
+            addresses : '台中市西屯區環中路二段982-1號 ',
+            phone : ' 0933-324-381',
+            time: ' 平日 18:00-23:00 <br>週末 13:00-21:00 (週一公休)',
+            img : ' images/gym_info/B-plus-3.jpg',
+            web : ' https://www.facebook.com/bplusbouldering/'
+            },
+
+            {name :  ' Dapro室內攀岩場',
+            addresses : '台中市南屯區永春東七路700號 ',
+            phone : '04-2380-7490 ',
+            time: ' 平日 13:00-23:00<br>週末 10:00-20:00',
+            img : ' images/gym_info/Dapro.jpg',
+            web : 'https://www.facebook.com/daproindoorclimbing/ '
+            },
+
+            {name :  '攀吶攀岩館',
+            addresses : ' 台中市東區進化路90-1號',
+            phone : '04-2380-7490 ',
+            time: '平日 18:00-23:00<br>週末 11:00-23:00 ',
+            img: ' images/gym_info/panna-3.jpg',
+            web : ' https://www.facebook.com/vbclimbing/'
+            }
+        ]
+        let southGymArray =[
+            {name :  '嗨翻綜合體能館 ',
+            addresses : ' 台南市北區大和路121號',
+            phone : '06-358-4339 ',
+            time: ' 平日 14:00-22:00<br>週末 10:00-18:00 (週一公休)',
+            img : ' images/gym_info/hightfun55.jpg',
+            web : 'https://www.facebook.com/highfun55/?locale=zh_TW '
+            },
+
+            {name :  'Boulder Space圓石空間攀岩場 ',
+            addresses : ' 高雄市三民區昌裕街94巷11號',
+            phone : ' 0978-667-951 ',
+            time: ' 平日 14:00-23:00<br>週末 10:00-19:00',
+            img : ' images/gym_info/BoulderSpace.jpg',
+            web : ' https://www.facebook.com/Boulderspace/'
+            },
+
+            {name :  '抱石基地 ',
+            addresses : ' 高雄市左營區重信路24巷11號',
+            phone : '0910-439-361 ',
+            time: ' 平日 14:00-22:30<br>週末 10:00-19:30',
+            img : ' images/gym_info/base-camp.jpg',
+            web : ' https://www.facebook.com/BaseCampKHH/'
+            }
+        ]
+
+        let eastGymArray =[
+            {name:  '小窩共享活動空間 ',
+            addresses : ' 花蓮縣吉安鄉民治路242號後巷',
+            phone: ' 0912-134-482',
+            time: ' 營業時間 17:30-23:00',
+            img : ' images/gym_info/little-nest.jpg',
+            web : 'https://www.facebook.com/profile.php?id=100086387397047 '
+            },
+
+            {name :  '久淘 攀岩抱石館 ',
+            addresses : '宜蘭縣宜蘭市復興路一段102號 ',
+            phone : ' 0908-977-650 ',
+            time: '營業時間 13:00-22:00 ',
+            img : ' images/gym_info/jotao.jpg',
+            web : 'https://www.facebook.com/jioutaubouldering/ '
+            },
+
+            {name :  ' Rockdance舞岩抱石攀岩館',
+            addresses : ' 宜蘭縣冬山鄉冬山路二段534號',
+            phone : ' 03-958-8334 ',
+            time: '營業時間 13:00-22:00',
+            img: ' images/gym_info/rockdance.jpg',
+            web : 'https://www.facebook.com/profile.php?id=100083033755917 '
+            }
+        ]
+        
+
+        function append_dot(){
+            for( let i=0 ; i<current_array.length ; i=i+1){
+                // console.log(i)
+                if(i==0){
+                    $('.page_dot_box').empty() 
+                    $('.page_dot_box').append(`<div class="page_dot"></div>`) 
+                }else{
+                    $('.page_dot_box').append(`<div class="page_dot"></div>`) 
+                }
+                
+            }
+        }    
+
+        
+
+        // --------地區標籤tag
+
+        function tagin(e){
+            if($(window).width()<=992){
+                $(e.target).find('.btn_tag').removeClass('animate__fadeInUp')
+                $(e.target).find('.btn_tag').css('display','block').addClass('animate__fadeInUp')
+                $(e.target).siblings().find($('.btn_tag')).css('display','none')
+            }else{
+                $(e.target).find('.btn_tag').removeClass('animate__fadeInLeft')
+                $(e.target).find('.btn_tag').css('display','block').addClass('animate__fadeInLeft')
+                $(e.target).siblings().find($('.btn_tag')).css('display','none')
+            }
+        }
+        // 點選地區標籤，找到對應array 並且顯示第一筆資料
+        let current_array =northGymArray
+        let current_index = 0
+
+        $('.location_btn').click(function(e){
+            current_index = 0
+            tagin(e)
+            
+            let local = $(e.target).attr('local')
+
+            if (local == 'north'){
+                current_array= northGymArray
+            }else if(local == 'middle'){
+                current_array= middleGymArray
+            }else if(local == 'south'){
+                current_array= southGymArray
+            }else{
+                current_array= eastGymArray
+            }
+            
+            $(function(){
+                // console.log('current_array.length', current_array.length)
+                
+                let i = 0
+                let current_img = current_array[i].img
+                let current_name = current_array[i].name
+                let current_addresses = current_array[i].addresses
+                let current_phone = current_array[i].phone
+                let current_time = current_array[i].time
+                let current_web = current_array[i].web
+                let current_map = current_array[i].map
+                
+                let cardHtml = `<div class="gym_photo">
+                        <img class="w-100 h-100" src="${current_img}" alt="">
+                    </div>
+                    <div class="gym_info mb-3">
+                        <h4 class="gym_name" >${current_name}</h4>
+                        <p class="gym_addresses" >${current_addresses}</p>
+                        <p class="gym_phone">${current_phone}</p>
+                        <p class="gym_time">${current_time}</p>
+                        <div class="icon">
+                        <a class="text-decoration-none color_darkblue" href="${current_web}">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a class="text-decoration-none color_darkblue" href="${current_map}">
+                            <i class="fa-solid fa-location-dot"></i>
+                            </a>
+                        </div>
+                    </div>
+                    `
+
+                $('.gym_current_info').empty().append(cardHtml)
+                append_dot() 
+            })  
+        })
+       
+        //--------點擊顯示點時。顯示對應資料          
+        $('.page_dot_box').on("click",$('.page_dot'),function(e){
+
+            // console.log($(e.target).index())
+            current_index = $(e.target).index()
+            changepic()
+            fadeInRight()
+                // $('.gym_card').addClass('animate__slideInRight') 
+        })
+
+        $('.right_btn').click(function(){
+            console.log(current_index)
+            current_index= current_index+1
+            if(current_index >= current_array.length){
+                current_index = current_index-current_array.length
+                changepic()
+                fadeInRight()
+            }else{
+                changepic()
+                fadeInRight()
+            }
+        })
+        $('.left_btn').click(function(){
+            console.log(current_index)
+            current_index= current_index-1
+            if(current_index < 0){
+                current_index = current_index + current_array.length
+                changepic()
+                fadeInRight()
+                
+            }else{
+                changepic()
+                fadeInRight()
+            }
+        })
+
+        // --------------以目前index抓新資料顯示
+        function changepic(){
+            $('.page_dot').eq(current_index).css('background-color','var(--color-pink4)').siblings().css('background-color','var(--color-pink2)')
+            
+            i = current_index
+            current_img = current_array[i].img
+            current_name = current_array[i].name
+            current_addresses = current_array[i].addresses
+            current_phone = current_array[i].phone
+            current_time = current_array[i].time
+            current_web = current_array[i].web
+            current_map = current_array[i].map
+                
+            cardHtml = `<div class="gym_photo">
+                        <img class="w-100 h-100" src="${current_img}" alt="">
+                    </div>
+                    <div class="gym_info mb-3">
+                        <h4 class="gym_name">${current_name}</h4>
+                        <p class="gym_addresses">${current_addresses}</p>
+                        <p class="gym_phone">${current_phone}</p>
+                        <p class="gym_time">${current_time}</p>
+                        <div class="icon">
+                        <a class="text-decoration-none color_darkblue" href="${current_web}">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a class="text-decoration-none color_darkblue" href="${current_map}">
+                            <i class="fa-solid fa-location-dot"></i>
+                            </a>
+                        </div>
+                    </div>
+                    `
+
+            $('.gym_current_info').empty().append(cardHtml)
+                
+        }
+        function fadeInRight(){
+            let animate = 'animate__fadeInRight' +$(this).text()
+            $('.gym_current_info').addClass(animate).one('animationend',function(){
+                $(this).removeClass(animate);
+            })
+
+        }
+        
+
+        // --------------nav 視窗下滑時消失
+        let lastScroll = 0;
+
+        $(window).scroll(function () {
+            if($(window).width()>992){
+                const nowScroll = $(window).scrollTop();
+                // lastScroll = nowScroll
+
+                console.log(nowScroll);
+                console.log(lastScroll);
+                console.log(nowScroll == lastScroll);
+                console.log('nowScroll', nowScroll);
+
+                if (nowScroll > lastScroll) {
+                    $('.nav_bar').addClass('hide_nav')
+                }
+                else {
+                    $('.nav_bar').removeClass('hide_nav')
+                }
+
+                lastScroll = nowScroll
+            }
+        })
+        //    ---------------視窗滾動 物件淡入
+        if($(window).width()>992){
+            $(window).scroll(function () {
+            const nowScroll = $(window).scrollTop();
+            const boxOffsetTop = $('.sec_one_title').offset().top;
+            const widowHeight = $(window).height();
+            if (nowScroll >= (boxOffsetTop - widowHeight )) {
+                $('.sec_one_title').addClass('animate__fadeInUp')
+            }else{
+                $('.sec_one_title').removeClass('animate__fadeInUp')
+            }   
+            })
+            $(window).scroll(function () {
+                const nowScroll = $(window).scrollTop();
+                const boxOffsetTop = $('.sec_one_content').offset().top;
+                const widowHeight = $(window).height();
+                if (nowScroll >= (boxOffsetTop - widowHeight )) {
+                    $('.sec_one_content').addClass('animate__fadeInUp')
+                }else{
+                    $('.sec_one_content').removeClass('animate__fadeInUp')
+                }    
+            })
+            $(window).scroll(function () {
+                const nowScroll = $(window).scrollTop();
+                const boxOffsetTop = $('.sec_two_title').offset().top;
+                const widowHeight = $(window).height();
+                if (nowScroll >= (boxOffsetTop - widowHeight )) {
+                    $('.sec_two_title').addClass('animate__fadeInUp')
+                }else{
+                    $('.sec_two_title').removeClass('animate__fadeInUp')
+                }    
+            })
+            $(window).scroll(function () {
+                const nowScroll = $(window).scrollTop();
+                const boxOffsetTop = $('.sec_two_content').offset().top;
+                const widowHeight = $(window).height();
+                if (nowScroll >= (boxOffsetTop - widowHeight )) {
+                    $('.sec_two_content').addClass('animate__fadeInUp')
+                }else{
+                    $('.sec_two_content').removeClass('animate__fadeInUp')
+                }    
+            })
+            $(window).scroll(function () {
+                const nowScroll = $(window).scrollTop();
+                const boxOffsetTop = $('.sec_three_title').offset().top;
+                const widowHeight = $(window).height();
+                if (nowScroll >= (boxOffsetTop - widowHeight )) {
+                    $('.sec_three_title').addClass('animate__fadeInUp')
+                }else{
+                    $('.sec_three_title').removeClass('animate__fadeInUp')
+                }    
+            })
+            $(window).scroll(function () {
+                const nowScroll = $(window).scrollTop();
+                const boxOffsetTop = $('.sec_three_content').offset().top;
+                const widowHeight = $(window).height();
+                if (nowScroll >= (boxOffsetTop - widowHeight )) {
+                    $('.sec_three_content').addClass('animate__fadeInUp')
+                }else{
+                    $('.sec_three_content').removeClass('animate__fadeInUp')
+                }    
+            })
+
+        }else{
+            console.log(1111111111111111111111)
+            $(window).scroll(function () {
+            const nowScroll = $(window).scrollTop();
+            const boxOffsetTop = $('#sec1').offset().top;
+            const widowHeight = $(window).height();
+            if (nowScroll >= (boxOffsetTop - widowHeight )) {
+                $('#sec1').addClass('animate__fadeInUp')
+            }else{
+                $('#sec1').removeClass('animate__fadeInUp')
+            }   
+            })
+            $(window).scroll(function () {
+            const nowScroll = $(window).scrollTop();
+            const boxOffsetTop = $('#sec2').offset().top;
+            const widowHeight = $(window).height();
+            if (nowScroll >= (boxOffsetTop - widowHeight )) {
+                $('#sec2').addClass('animate__fadeInUp')
+            }else{
+                $('#sec2').removeClass('animate__fadeInUp')
+            }   
+            })
+            $(window).scroll(function () {
+            const nowScroll = $(window).scrollTop();
+            const boxOffsetTop = $('#sec3').offset().top;
+            const widowHeight = $(window).height();
+            if (nowScroll >= (boxOffsetTop - widowHeight )) {
+                $('#sec3').addClass('animate__fadeInUp')
+            }else{
+                $('#sec3').removeClass('animate__fadeInUp')
+            }   
+            })
+
+        }
+        $('.footer_btn').click(function(){
+            $('.my_toast').show();
+            $('.my_toast').addClass('animate__fadeInUp').one('animationend',function(){
+                $(this).removeClass('animate__fadeInUp');
+            });
+            $('.email_input').val("")
+            setTimeout(
+                function(){
+                    $('.my_toast').addClass('animate__fadeOutDown').one('animationend',function(){
+                        $(this).removeClass('animate__fadeOutDown');
+                        $('.my_toast').hide()
+                        })
+
+                } , 3000
+            )
+
+        })
+
+        
+        
+        
+
+
+
+    </script>
+    
+
+   
+</body>
+</html>

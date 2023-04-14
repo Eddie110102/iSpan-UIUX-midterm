@@ -1,0 +1,147 @@
+{'name' :  'MegaSTONE Climbing Gym ',
+'addresses' : ' 新北市新莊區中正路56巷5號',
+'phone' : '02-8992-8991 ',
+'time': ' 平日 14:30-22:30週末 10:00-20:00',
+'img' : ' ',
+'web' : 'https://www.facebook.com/MegaSTONE20190601/ '
+}
+{'name' :  'double8 岩究所 ',
+'addresses' : ' 台北市大同區迪化街一段251號',
+'phone' : '02-2550-8081 ',
+'time': ' 週一至週五 13:30-22:00週六日 09:30-18:30',
+'img' : ' ',
+'web' : 'https://www.facebook.com/double8tw '
+}
+
+{'name' :  'CORNER Bouldering Gym 角攀岩館 ',
+'addresses' : '台北市中山區新生北路一段86號 ',
+'phone' : '02-2563-3749 ',
+'time': ' 平日 10:00-23:00週末 09:00-21:00',
+'img' : ' ',
+'web' : ' https://www.facebook.com/corner.bouldering/'
+}
+
+{'name' :  ' 原岩攀岩館-萬華店',
+'addresses' : '台北市萬華區大理街149號 ',
+'phone' : '02 2308 8250 ',
+'time': '平日 10:00-23:00週末 09:00-21:00 ',
+'img' : ' ',
+'web' : ' https://www.facebook.com/TupClimbingWanhua/'
+}
+
+{'name' :  '市民抱石攀岩館 ',
+'addresses' : '台北市南港區市民大道八段552號 ',
+'phone' : '02 2788 0615 ',
+'time': ' 10:00-22:00',
+'img' : ' ',
+'web' : ' https://www.facebook.com/CivicBouldergymTaipei/?locale=zh_TW'
+}
+
+-------------------中部----------------------
+
+{'name' :  ' 破舊二場',
+'addresses' : ' 台中市烏日區健行路131號',
+'phone' : '0968-298876 ',
+'time': '週一到週五 17:30-22:30週六到週日 14:00-22:00 ',
+'img' : ' ',
+'web' : 'https://www.facebook.com/ShabbyfactoryII/ '
+}
+
+{'name' :  'The Depot City ',
+'addresses' : '台中市北屯區敦平二街17號 ',
+'phone' : '04 2299 4803 ',
+'time': ' 週一到週五 18:00-23:00週六到週日 13:00-20:00',
+'img' : ' ',
+'web' : ' https://www.facebook.com/thedepotcity/'
+}
+
+{'name' :  ' B-plus 攀岩館',
+'addresses' : '台中市西屯區環中路二段982-1號 ',
+'phone' : ' 0933 324 381',
+'time': ' 週二到週五 18:00-23:00週六 13:00-21:00週日 13:00-19:00週一公休',
+'img' : ' ',
+'web' : ' https://www.facebook.com/bplusbouldering/'
+}
+
+{'name' :  ' Dapro室內攀岩場',
+'addresses' : '台中市南屯區永春東七路700號 ',
+'phone' : '04 2380 7490 ',
+'time': ' 週一到週五 13:00-23:00週六到週日 10:00-20:00',
+'img' : ' ',
+'web' : 'https://www.facebook.com/daproindoorclimbing/ '
+}
+
+{'name' :  '攀吶攀岩館',
+'addresses' : ' 台中市東區進化路90-1號',
+'phone' : 'none ',
+'time': '週一、二 18:00-23:00週三、四、五 14:00-23:00週六 11:00-23:00週日 11:00-20:00 ',
+'img' : ' ',
+'web' : ' https://www.facebook.com/vbclimbing/'
+}
+
+------------------------南部---------------
+{'name' :  '嗨翻綜合體能館 ',
+'addresses' : ' 台南市北區大和路121號',
+'phone' : '06 358 4339 ',
+'time': ' 週二到週五 14:00-22:00週六到週日 10:00-18:00',
+'img' : ' ',
+'web' : 'https://www.facebook.com/highfun55/?locale=zh_TW '
+}
+
+{'name' :  'Boulder Space圓石空間攀岩場 ',
+'addresses' : ' 高雄市三民區昌裕街94巷11號',
+'phone' : ' 0978 667 951 ',
+'time': ' 週一到週五 14:00-23:00週六到週日 10:00-19:00',
+'img' : ' ',
+'web' : ' https://www.facebook.com/Boulderspace/'
+}
+
+{'name' :  '抱石基地 ',
+'addresses' : ' 高雄市左營區重信路24巷11號',
+'phone' : '0910 439 361 ',
+'time': ' 週一到週五 14:00-22:30週六到週日 10:00-19:30',
+'img' : ' ',
+'web' : ' https://www.facebook.com/BaseCampKHH/'
+}
+
+{'name' :  ' ',
+'addresses' : ' ',
+'phone' : ' ',
+'time': ' ',
+'img' : ' ',
+'web' : ' '
+}
+
+{'name' :  ' ',
+'addresses' : ' ',
+'phone' : ' ',
+'time': ' ',
+'img' : ' ',
+'web' : ' '
+}
+
+
+--------------------------東部-----------------------
+{'name' :  '小窩共享活動空間 ',
+'addresses' : ' 花蓮縣吉安鄉民治路242號後巷',
+'phone' : ' 0912 134 482',
+'time': ' 週日到週五 17:30-23:00',
+'img' : ' ',
+'web' : 'https://www.facebook.com/profile.php?id=100086387397047 '
+}
+
+{'name' :  '久淘 攀岩抱石館 ',
+'addresses' : '宜蘭縣宜蘭市復興路一段102號 ',
+'phone' : ' 0908 977 650 ',
+'time': '13:00-22:00 ',
+'img' : ' ',
+'web' : 'https://www.facebook.com/jioutaubouldering/ '
+}
+
+{'name' :  ' Rockdance舞岩抱石攀岩館',
+'addresses' : ' 宜蘭縣冬山鄉冬山路二段534號',
+'phone' : ' 03 958 8334 ',
+'time': ' 13:00-22:00',
+'img' : ' ',
+'web' : 'https://www.facebook.com/profile.php?id=100083033755917 '
+}
