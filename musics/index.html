@@ -1,0 +1,4653 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,300&family=Noto+Sans+TC:wght@300&family=Noto+Serif+JP:wght@300;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Music</title>
+    <link rel="shortcut icon" href="./Interim-report-img/Music/tom-jerry/cute-jerry-2.png" type="image/x-icon">
+  </head>
+  <style>
+    /* autoplay  loop  muted */
+    /* blur(8px) */
+
+    html {
+      height: 100%;
+      scroll-behavior: smooth;
+      scroll-snap-type: y mandatory;
+    }
+
+    * {
+      margin: 0;
+      /* outline: solid rgb(153, 255, 128); */
+      font-family: "Cormorant Garamond", serif;
+      font-family: "Noto Sans TC", sans-serif;
+      font-family: "Noto Serif JP", serif;
+    }
+
+    body {
+      background-color: rgb(15, 15, 15);
+      /* transition: .8S; */
+      overflow: hidden;
+    }
+
+    .fixd {
+      position: fixed;
+      top: 0;
+    }
+
+    .speace-box {
+      margin: auto;
+      height: 80px;
+      width: 99%;
+      min-width: 1280px;
+      max-width: 1280px;
+      display: none;
+    }
+
+    .speace-light {
+      width: 1280px;
+      height: 2px;
+      background-color: #fff;
+      margin: 200px auto;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        #fff 50%,
+        transparent 100%
+      );
+      display: none;
+    }
+
+    .color-gold {
+      color: rgb(248, 197, 67);
+      font-size: 25px;
+    }
+
+    .w-100 {
+      width: 100%;
+      margin: auto;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .z-index-99 {
+      z-index: 99;
+    }
+
+    .padding-bm {
+      padding-bottom: 30px;
+    }
+
+    .color-fff {
+      background-color: rgb(189, 189, 189);
+    }
+
+    .muse-box-sh {
+      transition: 0.8s;
+      /* border-radius: 10px; */
+    }
+
+    .skrillex-box-sh {
+      transition: 0.8s;
+      /* border-radius: 10px; */
+    }
+
+    .mj-bder {
+      transition: 0.8s;
+    }
+
+    .guns-bder {
+      transition: 0.8s;
+    }
+
+    .grayscale {
+      filter: grayscale(90%) brightness(40%) blur(8px);
+    }
+
+    .face-box-sh {
+      box-shadow: 0 0 50px black inset;
+    }
+
+    .sigle-color {
+      color: goldenrod;
+    }
+
+    .sigle-color-2 {
+      color: rgb(221, 1, 250);
+    }
+
+    .sigle-color-22 {
+      color: rgb(0, 195, 255);
+    }
+
+    .sigle-color-3 {
+      color: goldenrod;
+    }
+
+    .sigle-color-4 {
+      color: rgb(230, 0, 0);
+    }
+
+    .sigle-color-44 {
+      color: rgb(9, 255, 0);
+    }
+
+    .sigle-color-5 {
+      color: goldenrod;
+    }
+
+    .none-box {
+      width: 100%;
+      height: 300px;
+    }
+
+    .navbar {
+      width: 100%;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(0, 0, 0);
+      position: fixed;
+      top: 0;
+      z-index: 999;
+      opacity: 0;
+      transition: 0.8s;
+      color: goldenrod;
+      border-bottom: 1px solid goldenrod;
+    }
+
+    .navbar ul {
+      color: white;
+      width: 70%;
+      background-color: black;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .navbar ul li {
+      list-style: none;
+    }
+
+    .navbar ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .container {
+      width: 99%;
+      min-width: 1280px;
+      max-width: 1280px;
+      margin: 0px auto 300px auto;
+      display: none;
+    }
+
+    .container02 {
+      width: 99%;
+      min-width: 1280px;
+      max-width: 1280px;
+      margin: 0px auto 300px auto;
+    }
+
+    .section {
+      width: 100%;
+    }
+
+    .row {
+      margin: auto;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .row01 {
+      width: 100%;
+      margin: auto;
+      position: relative;
+      margin-bottom: 300px;
+    }
+
+    .row02 {
+      width: 100%;
+      margin: auto;
+      position: relative;
+    }
+
+    .row03 {
+      width: 100%;
+      margin: auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .top-post {
+      width: 85%;
+      height: 480px;
+      margin: 50px auto;
+      display: flex;
+      position: relative;
+    }
+
+    .top-face {
+      width: 99.5%;
+      height: 99.5vh;
+      /* min-width: 1280px;
+        max-width: 1280px; */
+      position: absolute;
+      top: 0px;
+      background-color: rgba(0, 0, 0, 0.76);
+      transition: 2.5s;
+      clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+      /* clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0% 50%); */
+      z-index: 98;
+      border: 2px solid rgb(255, 255, 255);
+      box-shadow: 0 0 10px white inset;
+      overflow: hidden;
+      /* display: none; */
+    }
+
+    .top-face02 {
+      width: 99.5%;
+      height: 99.5vh;
+      /* min-width: 1280px;
+        max-width: 1280px; */
+      position: absolute;
+      top: 0px;
+      background-color: rgba(0, 0, 0, 0.76);
+      transition: 2.5s;
+      clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+      /* clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0% 50%); */
+      z-index: 98;
+      border: 2px solid goldenrod;
+      overflow: hidden;
+      /* display: none; */
+    }
+
+    .dino-logo {
+      width: 98%;
+      height: 193px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      background-color: rgba(50, 50, 50, 0.164);
+      text-align: center;
+      z-index: 99;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid white;
+      font-size: 18px;
+    }
+
+    .dino-logo2 {
+      /* width: 30%; */
+      width: 500px;
+      height: 200px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      background-color: rgba(0, 0, 0, 0.616);
+      text-align: center;
+      z-index: 99;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 3px solid goldenrod;
+    }
+
+    .enter {
+      width: 130px;
+      height: 45px;
+      border-radius: 30px;
+      background-color: rgb(218, 165, 32);
+      position: absolute;
+      top: 92%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 22px;
+      transition: 0.5s;
+      z-index: 99;
+      opacity: 1;
+      border: 3px solid rgb(0, 0, 0);
+    }
+
+    .enter:hover {
+      box-shadow: 0 0 10px goldenrod;
+      transform: translate(-50%, -50%) scale(1.2);
+      border: 2px solid white;
+      filter: brightness(120%);
+    }
+
+    /* ---------------top------------------------------ */
+    .top-post-box {
+      width: 100%;
+      height: 760px;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .box1 {
+      /* padding-top: 15px; */
+    }
+
+    .box2 {
+      /* border: 3px solid white; */
+      /* padding-bottom: 30px; */
+    }
+
+    .picture01 {
+      width: 19%;
+      height: 100%;
+      transform: skewX(-10deg);
+      margin-right: 1%;
+      position: relative;
+    }
+
+    .picture01:hover .name-1 {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+
+    .picture02:hover .name-2 {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+
+    .picture03:hover .name-3 {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+
+    .picture04:hover .name-4 {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+
+    .picture05:hover .name-5 {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+
+    .name-1 {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      color: white;
+      text-align: center;
+      padding-top: 30px;
+      transition: 1s;
+      opacity: 0;
+    }
+
+    .name-2 {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      color: white;
+      text-align: center;
+      padding-top: 30px;
+      transition: 1s;
+      opacity: 0;
+    }
+
+    .name-3 {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      color: white;
+      text-align: center;
+      padding-top: 30px;
+      transition: 1s;
+      opacity: 0;
+    }
+
+    .name-4 {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      color: white;
+      text-align: center;
+      padding-top: 30px;
+      transition: 1s;
+      opacity: 0;
+    }
+
+    .name-5 {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      color: white;
+      text-align: center;
+      padding-top: 30px;
+      transition: 1s;
+      opacity: 0;
+    }
+
+    .picture01:hover .tom-01 {
+      transform: translateX(-125px);
+      /* z-index: 99; */
+    }
+
+    .tom-01 {
+      width: 70%;
+      position: absolute;
+      transition: 0.5s;
+    }
+
+    .warp-img {
+      width: 100%;
+      height: 100%;
+      transition: 0.5s;
+      position: relative;
+
+      /* opacity: 0; */
+      /* padding-bottom: 30px; */
+      /* transform: scale(2); */
+    }
+
+    .warp-img-color {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.795);
+      z-index: 99;
+      transition: 1s;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      border-top: 2px solid goldenrod;
+      border-bottom: 2px solid rgb(255, 255, 255);
+    }
+
+    .warp-img-color-2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.795);
+      z-index: 99;
+      transition: 1s;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      border-top: 2px solid rgb(255, 255, 255);
+      border-bottom: 2px solid goldenrod;
+    }
+
+    .warp-img:hover {
+      /* transform: scale(1.05); */
+      border: 2px solid rgb(142, 142, 142);
+    }
+
+    .warp-img:hover .warp-img-color {
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .warp-img:hover .warp-img-color-2 {
+      clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    }
+
+    .warp-img img:hover {
+      filter: sepia(10%);
+    }
+
+    .warp-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* object-position: center 20%; */
+      filter: sepia(70%);
+      transition: 0.5s;
+      z-index: 99;
+    }
+
+    .picture02 {
+      width: 19%;
+      height: 100%;
+      transform: skewX(-10deg) translateY(20px);
+      margin-right: 1%;
+      position: relative;
+    }
+
+    .tom-02 {
+      width: 55%;
+      position: absolute;
+      top: 0;
+      left: 20px;
+      transition: 0.5s;
+    }
+
+    .picture02:hover .tom-02 {
+      transform: translateY(-140px);
+      /* z-index: 99; */
+    }
+
+    .picture03 {
+      width: 19%;
+      height: 100%;
+      transform: skewX(-10deg);
+      margin-right: 1%;
+      position: relative;
+    }
+
+    .tom-jerry {
+      width: 50%;
+      position: absolute;
+      top: 0;
+      right: 50px;
+      transition: 0.5s;
+      transform: translateY(-83px);
+      z-index: 99;
+      opacity: 0;
+    }
+
+    .picture03:hover .tom-jerry {
+      opacity: 1;
+    }
+
+    .picture04 {
+      width: 19%;
+      height: 100%;
+      transform: skewX(-10deg) translateY(20px);
+      margin-right: 1%;
+      position: relative;
+    }
+
+    .picture05 {
+      width: 19%;
+      height: 100%;
+      transform: skewX(-10deg);
+      margin-right: 1%;
+      position: relative;
+    }
+
+    .jerry-01 {
+      width: 45%;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      transition: 0.5s;
+    }
+
+    .jerry-02 {
+      width: 60%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transition: 0.5s;
+    }
+
+    .picture05:hover .jerry-01 {
+      transform: translateX(100px);
+    }
+
+    .picture04:hover .jerry-02 {
+      transform: translateY(-92%);
+    }
+
+    /* -------------guns-logo--------------- */
+
+    .guns-logo {
+      width: 500px;
+      height: 500px;
+      margin: 0px auto 0px auto;
+      position: relative;
+      /* display: flex; */
+      /* background-color: #fff; */
+    }
+
+    .logo-bgc {
+      width: 500px;
+      height: 500px;
+      /* background-color: rgb(173, 169, 169); */
+      margin: auto;
+    }
+
+    .guns-logo05 {
+      width: 100%;
+      position: absolute;
+      top: 0px;
+      filter: sepia(100%);
+      transition: 1s;
+    }
+
+    .guns-logo04 {
+      width: 100%;
+      position: absolute;
+      top: 0px;
+      opacity: 0;
+      transition: 1s;
+    }
+
+    .guns-logo:hover .guns-logo05 {
+      opacity: 0;
+    }
+
+    .guns-logo:hover .guns-logo04 {
+      opacity: 1;
+    }
+
+    .guns-logo:hover .guns-logo-about {
+      opacity: 1;
+    }
+
+    .guns-logo-about {
+      position: absolute;
+      bottom: -170px;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: auto;
+      width: 100%;
+      height: 200px;
+      color: rgb(249, 249, 249);
+      z-index: 99;
+      text-align: center;
+      line-height: 1.5em;
+      letter-spacing: 1px;
+      font-size: 16px;
+      transition: 1s;
+      opacity: 0;
+    }
+
+    /* -------------guns-about--------------- */
+
+    .guns-about {
+      width: 85%;
+      margin: 400px auto 0px auto;
+      position: relative;
+    }
+
+    .guns-about-bg01 {
+      width: 80%;
+      position: absolute;
+      left: 0;
+    }
+
+    .guns-about-bg02 {
+      width: 80%;
+      position: absolute;
+      top: 900px;
+      right: 0;
+    }
+
+    .guns-about-bg01 img {
+      width: 100%;
+      opacity: 0.3;
+    }
+
+    .guns-about-bg02 img {
+      width: 100%;
+      opacity: 0.3;
+    }
+
+    .guns-about01 {
+      width: 100%;
+      margin-bottom: 300px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 1.5s;
+    }
+
+    .guns-about02 {
+      width: 100%;
+      margin-top: 300px;
+      margin-bottom: 300px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 1.5s;
+    }
+
+    .guns-about03 {
+      width: 100%;
+      margin-bottom: 300px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      opacity: 1;
+      transition: 2s;
+    }
+
+    .guns-mv01 {
+      width: 400px;
+      filter: sepia(50%);
+    }
+
+    .guns-mv01 video {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid rgb(151, 109, 1);
+    }
+
+    .guns-mv02 {
+      width: 400px;
+      filter: sepia(50%);
+    }
+
+    .guns-mv02 video {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 5px goldenrod;
+    }
+
+    .guns-text {
+      width: 60%;
+      height: 150px;
+      text-align: center;
+      color: rgb(255, 255, 255);
+      padding: 0 50px;
+      line-height: 1.6em;
+    }
+
+    .guns-text-name {
+      color: rgb(228, 185, 11);
+      line-height: 1.4em;
+      font-size: 30px;
+      padding-bottom: 20px;
+    }
+
+    /* -------------guns-show--------------- */
+
+    .guns-show {
+      width: 50%;
+      height: 1450px;
+      min-width: 900px;
+      position: relative;
+      margin: 150px auto 0 auto;
+      display: flex;
+    }
+
+    .guns-show img {
+      width: 100%;
+      border: 2px solid white;
+    }
+
+    .guns-show-img1 {
+      width: 300px;
+      transform: rotate(-2deg);
+      position: absolute;
+      left: -10px;
+      filter: sepia(80%);
+      transition: 0.5s;
+    }
+
+    .guns-show-img2 {
+      width: 270px;
+      transform: rotate(-5deg);
+      position: absolute;
+      top: 400px;
+      filter: sepia(80%);
+      transition: 0.5s;
+    }
+
+    .guns-show-img3 {
+      width: 350px;
+      transform: rotate(5deg);
+      position: absolute;
+      top: 0px;
+      left: 250px;
+      z-index: 20;
+      filter: sepia(80%);
+      transition: 0.5s;
+    }
+
+    .guns-show-img4 {
+      width: 280px;
+      transform: rotate(-8deg);
+      position: absolute;
+      top: 8px;
+      right: 0;
+      z-index: 19;
+      filter: sepia(80%);
+      transition: 0.5s;
+    }
+
+    .guns-show-img5 {
+      width: 400px;
+      transform: rotate(2deg);
+      position: absolute;
+      top: 450px;
+      right: 280px;
+      z-index: 21;
+      filter: sepia(80%);
+      transition: 0.5s;
+    }
+
+    .guns-show-img6 {
+      width: 280px;
+      transform: rotate(5deg);
+      position: absolute;
+      top: 330px;
+      right: 30px;
+      z-index: 21;
+      filter: sepia(80%);
+      transition: 0.5s;
+    }
+
+    .guns-show-img7 {
+      width: 280px;
+      transform: rotate(5deg);
+      position: absolute;
+      top: 700px;
+      right: 600px;
+      z-index: 20;
+      filter: sepia(80%);
+      transition: 0.5s;
+    }
+
+    .guns-show-img8 {
+      width: 280px;
+      transform: rotate(-3deg);
+      position: absolute;
+      top: 750px;
+      right: 0px;
+      z-index: 21;
+      filter: sepia(80%);
+      transition: 0.5s;
+    }
+
+    .guns-show-img9 {
+      width: 380px;
+      transform: rotate(-1deg);
+      position: absolute;
+      top: 720px;
+      right: 250px;
+      z-index: 21;
+      filter: sepia(80%);
+      transition: 0.5s;
+    }
+
+    .guns-show-img10 {
+      width: 300px;
+      transform: rotate(-3deg);
+      position: absolute;
+      top: 950px;
+      left: 0;
+      z-index: 21;
+      filter: sepia(80%);
+      transition: 0.5s;
+    }
+
+    .guns-show-img11 {
+      width: 270px;
+      transform: rotate(-0deg);
+      position: absolute;
+      top: 1050px;
+      left: 270px;
+      z-index: 21;
+      filter: sepia(80%);
+      transition: 0.5s;
+      z-index: 95;
+    }
+
+    .guns-show-img12 {
+      width: 450px;
+      transform: rotate(3deg);
+      position: absolute;
+      top: 1100px;
+      right: -35px;
+      z-index: 21;
+      filter: sepia(80%);
+      transition: 0.5s;
+    }
+
+    .guns-show-img1:hover {
+      filter: sepia(30%);
+      transform: translate(-30px, -30px) rotate(-2deg) scale(1.02);
+    }
+
+    .guns-show-img2:hover {
+      filter: sepia(30%);
+      transform: translate(-50px, -50px) rotate(-2deg) scale(1.02);
+    }
+
+    .guns-show-img3:hover {
+      filter: sepia(30%);
+      transform: translate(0px, -70px) rotate(-2deg) scale(1.02);
+    }
+
+    .guns-show-img4:hover {
+      filter: sepia(30%);
+      transform: translate(40px, -120px) rotate(2deg) scale(1.02);
+    }
+
+    .guns-show-img5:hover {
+      filter: sepia(30%);
+      transform: translate(-40px, -60px) rotate(-1deg) scale(1.02);
+    }
+
+    .guns-show-img6:hover {
+      filter: sepia(30%);
+      transform: translate(40px, -70px) rotate(5deg) scale(1.02);
+    }
+
+    .guns-show-img7:hover {
+      filter: sepia(30%);
+      transform: translate(-80px, -80px) rotate(-1deg) scale(1.02);
+    }
+
+    .guns-show-img8:hover {
+      filter: sepia(30%);
+      transform: translate(40px, -70px) rotate(2deg) scale(1.02);
+    }
+
+    .guns-show-img9:hover {
+      filter: sepia(30%);
+      transform: scale(1.1);
+      z-index: 99;
+    }
+
+    .guns-show-img10:hover {
+      filter: sepia(30%);
+      transform: translate(-50px, 10px) rotate(-3deg) scale(1.02);
+    }
+
+    .guns-show-img11:hover {
+      filter: sepia(30%);
+      transform: translate(-10px, 60px) rotate(2deg) scale(1.02);
+    }
+
+    .guns-show-img12:hover {
+      transform: translate(40px, 60px) scale(1.02) rotate(5deg);
+      filter: sepia(30%);
+    }
+
+    /* -------------muse-logo--------------- */
+
+    .muse-logo {
+      width: 700px;
+      height: 350px;
+      margin: 0px auto 0px auto;
+      position: relative;
+      padding-top: 160px;
+    }
+
+    .muse-logo:hover .muse-text {
+      opacity: 1;
+    }
+
+    .muse-logo:hover .muse-logo-img02 {
+      opacity: 0;
+    }
+
+    .muse-logo:hover .muse-logo-img01 {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+
+    .muse-logo:hover .muse-logo-img02 {
+      transform: scale(1.1);
+    }
+
+    .muse-logo-img01 {
+      position: absolute;
+      transition: 0.8s;
+      width: 100%;
+      opacity: 0;
+    }
+
+    .muse-logo-img02 {
+      transition: 0.8s;
+      position: absolute;
+      width: 100%;
+      opacity: 0.8;
+    }
+
+    .muse-logo img {
+      width: 100%;
+    }
+
+    .muse-text {
+      width: 80%;
+      /* height: 500px; */
+      text-align: center;
+      font-size: 16px;
+      color: #fff;
+      position: absolute;
+      left: 50%;
+      bottom: -120px;
+      transform: translateX(-50%);
+      transition: 0.8s;
+      line-height: 1.5em;
+      letter-spacing: 1px;
+      opacity: 0;
+      z-index: 99;
+    }
+
+    /* -------------muse-about--------------- */
+    .muse-about {
+      width: 85%;
+      padding-top: 200px;
+      margin: 100px auto 0 auto;
+      overflow: hidden;
+      /* box-shadow: 0 0 10px rgb(242, 1, 255); */
+      border-radius: 10px;
+      position: relative;
+    }
+
+    .muse-big-bg {
+      width: 140%;
+      position: absolute;
+      opacity: 0.1;
+      transform: translateY(-500px);
+    }
+
+    .muse-about img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: relative;
+      opacity: 0.8;
+    }
+
+    .muse-about-bg {
+      opacity: 0.6;
+      width: 85%;
+      height: 100%;
+      position: absolute;
+      border-radius: 10px;
+    }
+
+    .muse-about-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .muse-about-img01 {
+      width: 1000px;
+      /* height: 300px; */
+      margin: 200px auto 80px auto;
+      position: relative;
+      /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
+      /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
+    }
+
+    .muse-clip {
+      position: absolute;
+      z-index: 99;
+    }
+
+    .muse-mv011 {
+      width: 100%;
+      /* opacity: 0.2; */
+      transition: 1s;
+      clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+      border-top: 2px solid rgb(30, 223, 248);
+      border-bottom: 2px solid rgb(30, 223, 248);
+      filter: grayscale(100%) blur(8px);
+    }
+
+    .muse-mv022 {
+      width: 100%;
+      /* opacity: 0.2; */
+      transition: 1s;
+      clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
+      border-top: 2px solid rgb(30, 223, 248);
+      border-bottom: 2px solid rgb(30, 223, 248);
+      filter: grayscale(100%) blur(8px);
+    }
+
+    .muse-mv033 {
+      width: 100%;
+      /* opacity: 0.2; */
+      transition: 1s;
+      clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+      border-top: 2px solid rgb(30, 223, 248);
+      border-bottom: 2px solid rgb(30, 223, 248);
+      filter: grayscale(100%) blur(8px);
+    }
+
+    .muse-mv-name {
+      flex-direction: column;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100px;
+      font-size: 15px;
+      color: rgb(255, 255, 255);
+      margin-bottom: 50px;
+      line-height: 1.4em;
+    }
+
+    .muse-mv-name01 {
+      margin-bottom: 10px;
+      text-align: center;
+      /* width: 100%; */
+      font-size: 30px;
+      color: rgb(159, 244, 255);
+      transition: 1s;
+      margin-bottom: 30px;
+      transform: translateX(135px);
+    }
+
+    .muse-mv-name02 {
+      text-align: center;
+      /* width: 100%; */
+      font-size: 15px;
+      color: rgb(255, 255, 255);
+      transition: 1s;
+      line-height: 1.6em;
+      transform: translateX(135px);
+      /* letter-spacing:2px; */
+    }
+
+    .transform-x-135 {
+      transform: translateX(-135px);
+    }
+
+    .muse-about-img01:hover .muse-mv01 {
+      /* transform: scale(1.1); */
+      clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+      opacity: 1;
+    }
+
+    .muse-about-img01:hover .muse-mv011 {
+      /* filter: grayscale(0%); */
+      /* transform: scale(1.1); */
+      opacity: 1;
+      clip-path: polygon(50% 50%, 100% 0%, 50% 50%, 0% 100%);
+    }
+
+    .muse-about-img02:hover .muse-mv022 {
+      /* filter: grayscale(0%); */
+      opacity: 1;
+      clip-path: polygon(50% 100%, 50% 100%, 50% 0, 50% 0);
+    }
+
+    .muse-about-img03:hover .muse-mv033 {
+      /* filter: grayscale(0%); */
+      transform: scale(1.1);
+      opacity: 1;
+      clip-path: polygon(100% 50%, 0 50%, 0 50%, 100% 50%);
+    }
+
+    .muse-about-img01:hover .muse-mv-name01 {
+      opacity: 0.2;
+      transform: scale(0.8);
+    }
+
+    .muse-about-img01:hover .muse-mv-name02 {
+      opacity: 0.2;
+      transform: scale(0.8);
+    }
+
+    .muse-about-img01 img {
+      width: 100%;
+    }
+
+    .muse-mv01 {
+      width: 100%;
+      /* filter: grayscale(90%); */
+      /* opacity: 0.2; */
+      transition: 1s;
+      clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+      border-top: 2px solid rgb(30, 223, 248);
+      border-bottom: 2px solid rgb(30, 223, 248);
+    }
+
+    .muse-about-img02 {
+      width: 1000px;
+      /* height: 300px; */
+      margin: 200px auto 150px auto;
+      position: relative;
+    }
+
+    .muse-about-img02:hover .muse-mv02 {
+      opacity: 1;
+      clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .muse-about-img02:hover .muse-mv-name01 {
+      opacity: 0.2;
+      transform: scale(0.8);
+      transform: scale(0.8);
+    }
+
+    .muse-about-img02:hover .muse-mv-name02 {
+      opacity: 0.2;
+      transform: scale(0.8);
+      transform: scale(0.8);
+    }
+
+    .muse-about-img02 img {
+      width: 100%;
+    }
+
+    .muse-mv02 {
+      clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
+      width: 100%;
+      /* filter: grayscale(90%); */
+      /* opacity: 0.2; */
+      transition: 1s;
+      border-top: 2px solid rgb(30, 223, 248);
+      border-bottom: 2px solid rgb(30, 223, 248);
+    }
+
+    .muse-about-img03 {
+      width: 1000px;
+      /* height: 300px; */
+      margin: 200px auto 80px auto;
+      position: relative;
+    }
+
+    .muse-about-img03:hover .muse-mv03 {
+      clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+      opacity: 1;
+      transform: scale(1.1);
+    }
+
+    .muse-about-img03:hover .muse-mv-name01 {
+      opacity: 0.2;
+      transform: scale(0.8);
+      transform: scale(0.8);
+    }
+
+    .muse-about-img03:hover .muse-mv-name02 {
+      opacity: 0.2;
+      transform: scale(0.8);
+      transform: scale(0.8);
+    }
+
+    .muse-about-img03 img {
+      object-fit: cover;
+    }
+
+    .muse-mv03 {
+      width: 100%;
+      /* filter: grayscale(90%); */
+      /* opacity: 0.2; */
+      transition: 1s;
+      clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+      border-top: 2px solid rgb(30, 223, 248);
+      border-bottom: 2px solid rgb(30, 223, 248);
+      /* line-height: 3rem; */
+    }
+
+    /* -------------muse-show--------------- */
+
+    .muse-show {
+      width: 85%;
+      margin: 0 auto 300px auto;
+      height: 650px;
+      padding: 150px 0 100px 0;
+      transition: 2s;
+      /* border: 1px solid aqua; */
+
+      /* overflow: hidden; */
+
+      /* background-color: #fff; */
+    }
+
+    .muse-show:hover {
+      /* border: 1px solid aqua;
+        box-shadow:0 0 30px aqua inset; */
+    }
+
+    .muse-show-img {
+      width: 320px;
+      height: 650px;
+      margin: auto;
+      position: relative;
+      /* overflow: hidden; */
+    }
+
+    .muse-show-img:hover .muse {
+      color: aqua;
+    }
+
+    .muse-show-img img {
+      width: 100%;
+      opacity: 0;
+    }
+
+    .muse-show-bg {
+      width: 280%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-33%);
+      background-color: rgba(255, 255, 255, 0);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .guiter-left {
+      width: 90%;
+      font-size: 15px;
+      transition: 2s;
+      color: rgb(255, 255, 255);
+    }
+
+    .muse-show:hover .guiter-left {
+      color: rgb(0, 255, 166);
+    }
+
+    .guiter-right {
+      width: 90%;
+      text-align: right;
+      font-size: 15px;
+      color: rgb(255, 255, 255);
+      transition: 2s;
+
+      /* width: 100%; */
+      /* position: absolute; */
+      /* top: 0; */
+      /* right: 0; */
+    }
+
+    .muse-show:hover .guiter-right {
+      color: aqua;
+    }
+
+    /* -------------.guiter01 -------------------- */
+    .muse-show:hover .guiter01 {
+      transform: translate(500px, 500px);
+    }
+
+    .muse-show:hover .guiter02 {
+      transform: translate(400px, 500px) scale(1.1);
+    }
+
+    .muse-show:hover .guiter03 {
+      transform: translate(450px, 500px);
+    }
+
+    .muse-show:hover .guiter04 {
+      transform: translate(400px, 400px) scale(0.8);
+    }
+
+    .muse-show:hover .guiter05 {
+      transform: translate(390px, 300px) scale(0.8);
+    }
+
+    .muse-show:hover .guiter06 {
+      transform: translate(450px, 400px);
+    }
+
+    .muse-show:hover .guiter07 {
+      transform: translate(372px, 86px) rotate(90deg);
+    }
+
+    .muse-show:hover .guiter08 {
+      transform: translate(320px, 250px) rotate(70deg);
+    }
+
+    .muse-show:hover .guiter09 {
+      transform: translate(360px, 250px) rotate(70deg);
+    }
+
+    .muse-show:hover .guiter10 {
+      transform: translate(460px, 360px) rotate(360deg);
+    }
+
+    .muse-show:hover .guiter11 {
+      transform: translate(460px, 150px) rotate(360deg);
+    }
+
+    .muse-show:hover .guiter12 {
+      transform: translate(350px, 120px) rotate(430deg) scale(0.9);
+    }
+
+    .muse-show:hover .guiter13 {
+      transform: translate(350px, 170px) rotate(70deg);
+    }
+
+    .muse-show:hover .guiter14 {
+      transform: translate(332px, 172px) rotate(180deg);
+    }
+
+    .muse-show:hover .guiter15 {
+      transform: translate(385px, -150px) rotate(90deg);
+    }
+
+    .muse-show:hover .guiter16 {
+      transform: translate(375px, -170px) rotate(90deg) scale(1.3);
+    }
+
+    .muse-show:hover .guiter17 {
+      transform: translate(385px, -150px) rotate(90deg);
+    }
+
+    .muse-show:hover .guiter18 {
+      transform: translate(388px, -138px) rotate(90deg) scale(1.2);
+    }
+
+    .muse-show:hover .guiter19 {
+      transform: translate(372px, -123px) rotate(90deg) scale(1.2);
+    }
+
+    .muse-show:hover .guiter20 {
+      transform: translate(368px, -40px) rotate(70deg) scale(1);
+    }
+
+    .muse-show:hover .guiter21 {
+      transform: translate(358px, -40px) rotate(180deg) scale(0.8);
+    }
+
+    .muse-show:hover .guiter22 {
+      transform: translate(388px, 25px) rotate(180deg) scale(1);
+    }
+
+    .muse-show:hover .guiter23 {
+      transform: translate(340px, -50px) rotate(70deg) scale(1);
+    }
+
+    .muse-show:hover .guiter24 {
+      transform: translate(367px, -478px) rotate(110deg) scale(0.8);
+    }
+
+    .muse-show:hover .guiter25 {
+      transform: translate(370px, -478px) rotate(110deg) scale(0.8);
+    }
+
+    .muse-show:hover .guiter26 {
+      transform: translate(362px, -478px) rotate(110deg) scale(0.8);
+    }
+
+    .muse-show:hover .guiter27 {
+      transform: translate(210px, -106px) rotate(180deg) scale(1.5);
+    }
+
+    .muse-show:hover .guiter28 {
+      transform: translate(347px, -560px) rotate(115deg) scale(0.9);
+    }
+
+    .muse-show:hover .guiter29 {
+      transform: translate(340px, -559px) rotate(115deg) scale(0.8);
+    }
+
+    .muse-show:hover .guiter30 {
+      transform: translate(328px, -552px) rotate(115deg) scale(0.8);
+    }
+
+    .muse-show:hover .guiter31 {
+      transform: translate(270px, -282px) rotate(180deg) scale(1.1);
+    }
+
+    .muse-show:hover .guiter32 {
+      transform: translate(265px, -272px) rotate(180deg) scale(1.1);
+    }
+
+    .muse-show:hover .guiter33 {
+      transform: translate(230px, -222px) rotate(180deg) scale(1.1);
+    }
+
+    .muse-show:hover .guiter34 {
+      transform: translate(386px, -608px) rotate(90deg) scale(0.8);
+    }
+
+    .muse-show:hover .guiter35 {
+      transform: translate(383px, -530px) rotate(270deg) scale(1);
+    }
+
+    .muse-show:hover .guiter36 {
+      transform: translate(380px, -370px) rotate(180deg) scale(0.8);
+    }
+
+    .muse-show:hover .guiter37 {
+      transform: translate(383px, -530px) rotate(270deg) scale(1);
+    }
+
+    /* -------------.guiter01 -------------------- */
+
+    .muse-show:hover .guiter-2-01 {
+      transform: translate(-345px, 275px) rotate(100deg) scale(1);
+    }
+
+    .muse-show:hover .guiter-2-02 {
+      transform: translate(-330px, 455px) rotate(180deg) scale(1);
+    }
+
+    .muse-show:hover .guiter-2-03 {
+      transform: translate(-365px, 518px) rotate(180deg) scale(1);
+    }
+
+    .muse-show:hover .guiter-2-04 {
+      transform: translate(-345px, 375px) rotate(360deg) scale(1);
+    }
+
+    .muse-show:hover .guiter-2-05 {
+      transform: translate(-319px, 403px) rotate(360deg) scale(1);
+    }
+
+    .muse-show:hover .guiter-2-06 {
+      transform: translate(-263px, 395px) rotate(180deg) scale(1);
+    }
+
+    .muse-show:hover .guiter-2-07 {
+      transform: translate(-248px, 405px) rotate(180deg) scale(1);
+    }
+
+    .muse-show:hover .guiter-2-08 {
+      transform: translate(-426px, 370px) rotate(360deg) scale(1);
+    }
+
+    .muse-show:hover .guiter-2-09 {
+      transform: translate(-326px, 345px) rotate(360deg) scale(1);
+    }
+
+    .muse-show:hover .guiter-2-10 {
+      transform: translate(-425px, 350px) rotate(360deg) scale(1);
+    }
+
+    .muse-show:hover .guiter-2-11 {
+      transform: translate(-325px, 343px) rotate(180deg) scale(0.9);
+    }
+
+    .muse-show:hover .guiter-2-12 {
+      transform: translate(-378px, 200px) rotate(360deg) scale(1.1);
+    }
+
+    .muse-show:hover .guiter-2-13 {
+      transform: translate(-409px, 270px) rotate(360deg) scale(1.1);
+    }
+
+    .muse-show:hover .guiter-2-14 {
+      transform: translate(-468px, 230px) rotate(390deg) scale(1.1);
+    }
+
+    .muse-show:hover .guiter-2-15 {
+      transform: translate(-409px, 193px) rotate(360deg) scale(1.1);
+    }
+
+    .muse-show:hover .guiter-2-16 {
+      transform: translate(-465px, 163px) rotate(360deg) scale(1);
+    }
+
+    .muse-show:hover .guiter-2-17 {
+      transform: translate(-290px, 58px) rotate(180deg) scale(1);
+    }
+
+    .muse-show:hover .guiter-2-18 {
+      transform: translate(-280px, 10px) rotate(180deg) scale(0.8);
+    }
+
+    .muse-show:hover .guiter-2-19 {
+      transform: translate(-242px, 50px) rotate(180deg) scale(1);
+    }
+
+    .muse-show:hover .guiter-2-20 {
+      transform: translate(-442px, 58px) rotate(295deg) scale(1);
+    }
+
+    .muse-show:hover .guiter-2-21 {
+      transform: translate(-370px, 68px) rotate(180deg) scale(1);
+    }
+
+    .muse-show:hover .guiter-2-22 {
+      transform: translate(-300px, -2px) rotate(180deg) scale(1.1);
+    }
+
+    .muse-show:hover .guiter-2-23 {
+      transform: translate(-448px, 32px) rotate(295deg) scale(1.1);
+    }
+
+    .muse-show:hover .guiter-2-24 {
+      transform: translate(-295px, -80px) rotate(285deg) scale(1.2);
+    }
+
+    .muse-show:hover .guiter-2-25 {
+      transform: translate(-442px, -245px) rotate(65deg) scale(1);
+    }
+
+    .muse-show:hover .guiter-2-26 {
+      transform: translate(-352px, -240px) rotate(278deg) scale(1);
+    }
+
+    .muse-show:hover .guiter-2-27 {
+      transform: translate(-430px, -290px) rotate(65deg) scale(1);
+    }
+
+    .muse-show:hover .guiter-2-28 {
+      transform: translate(-420px, -320px) rotate(65deg) scale(1.2);
+    }
+
+    .muse-show:hover .guiter-2-29 {
+      transform: translate(-370px, -320px) rotate(65deg) scale(1.2);
+    }
+
+    .muse-show:hover .guiter-2-30 {
+      transform: translate(-370px, -320px) rotate(65deg) scale(1.2);
+    }
+
+    .muse-show:hover .guiter-2-31 {
+      transform: translate(-311px, -725px) rotate(105deg) scale(0.9);
+    }
+
+    .muse-show:hover .guiter-2-32 {
+      transform: translate(-311px, -725px) rotate(105deg) scale(0.9);
+    }
+
+    .muse-show:hover .guiter-2-33 {
+      transform: translate(-317px, -725px) rotate(105deg) scale(0.9);
+    }
+
+    .muse-show:hover .guiter-2-34 {
+      transform: translate(-250px, -367px) rotate(180deg) scale(1.2);
+    }
+
+    .muse-show:hover .guiter-2-35 {
+      transform: translate(-375px, -430px) rotate(35deg) scale(1.2);
+    }
+
+    .muse-show:hover .guiter-2-36 {
+      transform: translate(-350px, -490px) rotate(90deg) scale(1.2);
+    }
+
+    .muse-show:hover .guiter-2-37 {
+      transform: translate(-380px, -488px) rotate(35deg) scale(1);
+    }
+
+    /* -------------skrillex-logo--------------- */
+
+    .skrillex-logo {
+      padding-top: 100px;
+      width: 50%;
+      margin: 0 auto 100px auto;
+      position: relative;
+    }
+
+    .skrillex-logo-01 {
+      opacity: 0;
+      width: 100%;
+      position: absolute;
+      /* box-shadow: 0 0 10px white; */
+      transition: 0.8s;
+    }
+
+    .skrillex-logo-02 {
+      /* opacity: 0; */
+      width: 100%;
+      /* position: absolute; */
+      /* box-shadow: 0 0 10px white; */
+      transition: 0.8s;
+    }
+
+    .skrillex-logo:hover .skrillex-logo-01 {
+      opacity: 1;
+      transform: scale(1.5);
+    }
+
+    .skrillex-logo:hover .skrillex-logo-02 {
+      opacity: 0;
+      transform: scale(1.5);
+    }
+
+    .skrillex-text {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px 20px;
+      color: white;
+      line-height: 1.6em;
+      font-size: 16px;
+      opacity: 0;
+      transition: 0.8s;
+      border-radius: 10px;
+    }
+
+    .skrillex-logo:hover .skrillex-text {
+      opacity: 1;
+      box-shadow: 0 0 20px rgb(95, 215, 252) inset;
+      border: 2px solid rgb(0, 255, 72);
+    }
+
+    /* -------------skrillex-show--------------- */
+
+    .skrillex-show01 {
+      width: 85%;
+      margin: auto;
+    }
+
+    .skrillex-show01-img {
+      width: 500px;
+      margin: 100px auto 300px auto;
+      position: relative;
+    }
+
+    .skrillex-show01-img:hover .skrillex-logoshow2 {
+      border-radius: 50%;
+      transform: scale(0.7) translateY(-80px) translateX(-15px);
+      border: 8px solid rgb(1, 218, 252);
+      box-shadow: 0 0 10px rgb(0, 255, 72);
+    }
+
+    .skrillex-show01 img {
+      width: 100%;
+      opacity: 0;
+    }
+
+    .skrillex-show02 {
+      width: 100%;
+      margin: 0 auto 0px 0;
+    }
+
+    .skrillex-show02-img {
+      width: 95%;
+      margin: auto;
+      position: relative;
+      height: 690px;
+      position: relative;
+      overflow: hidden;
+      transition: 0.8s;
+      border-radius: 10px;
+    }
+
+    .skrillex-show02-img:hover {
+      /* border: 1px solid rgb(95, 215, 252); */
+    }
+
+    .skrillex-logoshow {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .skrillex-logoshow2 {
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 0 20px rgb(95, 215, 252) inset;
+      border: 2px solid rgb(0, 255, 72);
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: 0.8s;
+    }
+
+    .skrillex-line01 {
+      width: 380px;
+      height: 1px;
+      background-color: rgb(0, 255, 72);
+      transition: 0.8s;
+      margin: auto;
+      z-index: 50;
+    }
+
+    .skrillex-line02 {
+      width: 380px;
+      height: 1px;
+      background-color: rgb(0, 255, 72);
+      transition: 0.8s;
+      margin: auto;
+      z-index: 50;
+    }
+
+    .skrillex-line03 {
+      width: 315px;
+      height: 1px;
+      background-color: rgb(0, 255, 72);
+      transition: 0.8s;
+      margin: auto;
+      z-index: 50;
+    }
+
+    .skrillex-line04 {
+      width: 315px;
+      height: 1px;
+      background-color: rgb(0, 255, 72);
+      transition: 0.8s;
+      margin: auto;
+      z-index: 50;
+    }
+
+    .skrillex-line05 {
+      width: 280px;
+      height: 1px;
+      background-color: rgb(0, 255, 72);
+      transition: 0.8s;
+      margin: auto;
+      z-index: 50;
+    }
+
+    .skrillex-line06 {
+      width: 116px;
+      height: 1px;
+      background-color: rgb(0, 255, 72);
+      transition: 0.8s;
+      margin: auto;
+      z-index: 50;
+    }
+
+    .skrillex-line07 {
+      width: 116px;
+      height: 1px;
+      background-color: rgb(0, 255, 72);
+      transition: 0.8s;
+      margin: auto;
+      z-index: 50;
+    }
+
+    .skrillex-show01-img:hover .skrillex-line01 {
+      /* transform: translate(-80px,280px) rotate(90deg); */
+      transform: translate(-140px, 280px) rotate(90deg);
+      box-shadow: 0 0 10px rgb(1, 218, 252);
+      border-radius: 20px;
+      height: 5px;
+    }
+
+    .skrillex-show01-img:hover .skrillex-line02 {
+      transform: translate(135px, 275px) rotate(-90deg);
+      box-shadow: 0 0 10px rgb(1, 218, 252);
+      border-radius: 20px;
+      height: 5px;
+    }
+
+    .skrillex-show01-img:hover .skrillex-line03 {
+      transform: translate(-73px, 228px) rotate(66deg);
+      box-shadow: 0 0 10px rgb(1, 218, 252);
+      border-radius: 20px;
+      height: 5px;
+      background-color: rgb(191, 0, 255);
+    }
+
+    .skrillex-show01-img:hover .skrillex-line04 {
+      transform: translate(69px, 224px) rotate(-66deg);
+      box-shadow: 0 0 10px rgb(1, 218, 252);
+      border-radius: 20px;
+      height: 5px;
+      background-color: rgb(191, 0, 255);
+    }
+
+    .skrillex-show01-img:hover .skrillex-line05 {
+      transform: translate(0px, 291px) rotate(360deg);
+      box-shadow: 0 0 10px rgb(1, 218, 252);
+      border-radius: 20px;
+      height: 5px;
+      background-color: rgb(191, 0, 255);
+    }
+
+    .skrillex-show01-img:hover .skrillex-line06 {
+      transform: translate(-117px, 388px) rotate(295deg);
+      box-shadow: 0 0 10px rgb(1, 218, 252);
+      border-radius: 20px;
+      height: 5px;
+    }
+
+    .skrillex-show01-img:hover .skrillex-line07 {
+      transform: translate(112px, 383px) rotate(-295deg);
+      box-shadow: 0 0 10px rgb(1, 218, 252);
+      border-radius: 20px;
+      height: 5px;
+    }
+
+    .skrillex-show01-bg {
+      transition: 0.5s;
+    }
+
+    .skrillex-show01-img:hover .skrillex-show01-bg {
+      opacity: 0;
+    }
+
+    /* .skrillex-show02-img02:hover {
+        opacity: 0;
+    } */
+    /* .skrillex-show02:hover .skrillex-show02-img02 {
+        opacity: 0;
+
+    } */
+
+    .skrillex-show02-img01 {
+      opacity: 0;
+      transform: translateX(6%);
+      transition: 0.8s;
+      z-index: 1;
+    }
+
+    .skrillex-show02-img:hover .skrillex-show02-img02 {
+      opacity: 0;
+    }
+
+    .skrillex-show02-img:hover .skrillex-show02-img01 {
+      opacity: 1;
+      z-index: 1;
+    }
+    .skrillex-show02-img:hover .button {
+      opacity: 1;
+    }
+    .skrillex-show02-img:hover .button02 {
+      opacity: 1;
+    }
+
+    .skrillex-show02-img:hover .side-light01 {
+      opacity: 1;
+    }
+
+    .skrillex-show02-img:hover .skrillex-show02-img {
+      border: 1px solid rgb(95, 215, 252);
+    }
+
+    .skrillex-show02-img02 {
+      position: absolute;
+      left: 0%;
+      transform: translateX(6%);
+      opacity: 1;
+      transition: 0.8s;
+    }
+
+    .skrillex-show02 img {
+      width: 90%;
+      /* height: 100vh; */
+    }
+
+    .skrillex-show02 video {
+      width: 90%;
+      /* height: 100vh; */
+    }
+
+    /* -------------light-box--------------- */
+
+    .position-ab {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .side-light01 {
+      width: 50px;
+      height: 30px;
+      background-color: rgb(38, 38, 38);
+      border-radius: 0 20px 20px 0;
+      border: 1px solid rgb(95, 215, 252);
+      margin-top: 10px;
+      transition: 0.5s;
+      z-index: 99;
+      opacity: 0;
+    }
+
+    /* ----------------------------super-light---------------- */
+    .super-light01 {
+      width: 1500px;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      transform: rotate(70deg);
+      opacity: 0;
+      z-index: 99;
+      position: absolute;
+    }
+
+    .super-light02 {
+      width: 1500px;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      transform: rotate(0deg);
+      opacity: 0;
+      z-index: 99;
+      position: absolute;
+    }
+
+    .super-light03 {
+      width: 1500px;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      transform: rotate(50deg);
+      opacity: 0;
+      z-index: 99;
+      position: absolute;
+    }
+
+    .super-light04 {
+      width: 1500px;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      transform: rotate(10deg);
+      opacity: 0;
+      z-index: 99;
+      position: absolute;
+    }
+
+    .super-light05 {
+      width: 1500px;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      transform: rotate(50deg);
+      opacity: 0;
+      z-index: 99;
+      position: absolute;
+    }
+
+    .super-light06 {
+      width: 1500px;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      transform: rotate(80deg);
+      opacity: 0;
+      z-index: 99;
+      position: absolute;
+    }
+
+    .super-light07 {
+      width: 1500px;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      transform: rotate(-10deg);
+      opacity: 0;
+      z-index: 99;
+      position: absolute;
+    }
+
+    .super-light08 {
+      width: 1500px;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      transform: rotate(30deg);
+      opacity: 0;
+      z-index: 99;
+      position: absolute;
+    }
+
+    .super-light09 {
+      width: 1500px;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      transform: rotate(-30deg);
+      opacity: 0;
+      z-index: 99;
+      position: absolute;
+    }
+
+    .super-light10 {
+      width: 1500px;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      transform: rotate(40deg);
+      opacity: 0;
+      z-index: 99;
+      position: absolute;
+    }
+
+    .super-light11 {
+      width: 1500px;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      transform: rotate(-50deg);
+      opacity: 0;
+      z-index: 99;
+      position: absolute;
+    }
+
+    .super-light12 {
+      width: 1500px;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      transform: rotate(-50deg);
+      opacity: 0;
+      z-index: 99;
+      position: absolute;
+    }
+
+    .super-light13 {
+      width: 1500px;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      transform: rotate(-50deg);
+      opacity: 0;
+      z-index: 99;
+      position: absolute;
+    }
+
+    .super-light14 {
+      width: 1500px;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      transform: rotate(-50deg);
+      opacity: 0;
+      z-index: 99;
+      position: absolute;
+    }
+
+    .super-light15 {
+      width: 1500px;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      transform: rotate(-30deg);
+      opacity: 0;
+      z-index: 99;
+      position: absolute;
+    }
+
+    .super-light16 {
+      width: 1500px;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      transform: rotate(-50deg);
+      opacity: 0;
+      z-index: 99;
+      position: absolute;
+    }
+
+    .super-light01-2 {
+      width: 1500px;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      transform: rotate(60deg);
+      opacity: 0;
+      z-index: 99;
+      position: absolute;
+    }
+
+    .super-light02-2 {
+      width: 1500px;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      transform: rotate(10deg);
+      opacity: 0;
+      z-index: 99;
+      position: absolute;
+    }
+
+    .super-light03-2 {
+      width: 1500px;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      transform: rotate(40deg);
+      opacity: 0;
+      z-index: 99;
+      position: absolute;
+    }
+
+    .super-light04-2 {
+      width: 1500px;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      transform: rotate(-30deg);
+      opacity: 0;
+      z-index: 99;
+      position: absolute;
+    }
+
+    .super-light05-2 {
+      width: 1500px;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      transform: rotate(-20deg);
+      opacity: 0;
+      z-index: 99;
+      position: absolute;
+    }
+
+    .super-light06-2 {
+      width: 1500px;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      transform: rotate(0deg);
+      opacity: 0;
+      z-index: 99;
+      position: absolute;
+    }
+
+    .super-light07-2 {
+      width: 1500px;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      transform: rotate(0deg);
+      opacity: 0;
+      z-index: 99;
+      position: absolute;
+    }
+
+    .super-light08-2 {
+      width: 1500px;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      transform: rotate(0deg);
+      opacity: 0;
+      z-index: 99;
+      position: absolute;
+    }
+
+    .super-light09-2 {
+      width: 1500px;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      transform: rotate(0deg);
+      opacity: 0;
+      z-index: 99;
+      position: absolute;
+    }
+
+    .super-light10-2 {
+      width: 1500px;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      transform: rotate(0deg);
+      opacity: 0;
+      z-index: 99;
+      position: absolute;
+    }
+
+    .super-light11-2 {
+      width: 1500px;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      transform: rotate(0deg);
+      opacity: 0;
+      z-index: 99;
+      position: absolute;
+    }
+
+    .super-light12-2 {
+      width: 1500px;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      transform: rotate(0deg);
+      opacity: 0;
+      z-index: 99;
+      position: absolute;
+    }
+
+    .super-light13-2 {
+      width: 1500px;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      transform: rotate(0deg);
+      opacity: 0;
+      z-index: 99;
+      position: absolute;
+    }
+
+    .super-light14-2 {
+      width: 1500px;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      transform: rotate(0deg);
+      opacity: 0;
+      z-index: 99;
+      position: absolute;
+    }
+
+    .super-light15-2 {
+      width: 1500px;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      transform: rotate(0deg);
+      opacity: 0;
+      z-index: 99;
+      position: absolute;
+    }
+
+    .super-light16-2 {
+      width: 1500px;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      transform: rotate(0deg);
+      opacity: 0;
+      z-index: 99;
+      position: absolute;
+    }
+
+    /* ----------------------------super-light-hover---------------- */
+
+    .side-light01:hover .super-light01 {
+      opacity: 1;
+    }
+
+    .side-light01:hover .super-light02 {
+      opacity: 1;
+    }
+
+    .side-light01:hover .super-light03 {
+      opacity: 1;
+    }
+
+    .side-light01:hover .super-light04 {
+      opacity: 1;
+    }
+
+    .side-light01:hover .super-light05 {
+      opacity: 1;
+    }
+
+    .side-light01:hover .super-light06 {
+      opacity: 1;
+    }
+
+    .side-light01:hover .super-light07 {
+      opacity: 1;
+    }
+
+    .side-light01:hover .super-light08 {
+      opacity: 1;
+    }
+
+    .side-light01:hover .super-light09 {
+      opacity: 1;
+    }
+
+    .side-light01:hover .super-light10 {
+      opacity: 1;
+    }
+
+    .side-light01:hover .super-light11 {
+      opacity: 1;
+    }
+
+    .side-light01:hover .super-light12 {
+      opacity: 1;
+    }
+
+    .side-light01:hover .super-light13 {
+      opacity: 1;
+    }
+
+    .side-light01:hover .super-light14 {
+      opacity: 1;
+    }
+
+    .side-light01:hover .super-light15 {
+      opacity: 1;
+    }
+
+    .side-light01:hover .super-light16 {
+      opacity: 1;
+    }
+
+    .side-light01:hover .super-light01-2 {
+      opacity: 1;
+    }
+
+    .side-light01:hover .super-light02-2 {
+      opacity: 1;
+    }
+
+    .side-light01:hover .super-light03-2 {
+      opacity: 1;
+    }
+
+    .side-light01:hover .super-light04-2 {
+      opacity: 1;
+    }
+
+    .side-light01:hover .super-light05-2 {
+      opacity: 1;
+    }
+
+    .side-light01:hover .super-light06-2 {
+      opacity: 1;
+    }
+
+    .side-light01:hover .super-light07-2 {
+      opacity: 1;
+    }
+
+    .side-light01:hover .super-light08-2 {
+      opacity: 1;
+    }
+
+    .side-light01:hover .super-light09-2 {
+      opacity: 1;
+    }
+
+    .side-light01:hover .super-light10-2 {
+      opacity: 1;
+    }
+
+    .side-light01:hover .super-light11-2 {
+      opacity: 1;
+    }
+
+    .side-light01:hover .super-light12-2 {
+      opacity: 1;
+    }
+
+    .side-light01:hover .super-light13-2 {
+      opacity: 1;
+    }
+
+    .side-light01:hover .super-light14-2 {
+      opacity: 1;
+    }
+
+    .side-light01:hover .super-light15-2 {
+      opacity: 1;
+    }
+
+    .side-light01:hover .super-light16-2 {
+      opacity: 1;
+    }
+
+    .light-box {
+      margin: auto;
+      width: 85%;
+      height: 700px;
+      /* border: 1px solid rgb(95, 215, 252); */
+      position: relative;
+      transition: 0.5s;
+      /* overflow: hidden; */
+      border-radius: 10px;
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      /* transition: 1s; */
+    }
+
+    .light-box:hover {
+      /* box-shadow: 0 0 50px rgb(95, 215, 252) inset; */
+    }
+
+    .light01 {
+      transition: 0.5s;
+      width: 100%;
+      height: 3px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      position: absolute;
+      left: 0;
+      opacity: 0;
+      z-index: 99;
+    }
+
+    .light02 {
+      transition: 0.5s;
+      width: 100%;
+      height: 3px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      position: absolute;
+      left: 0;
+      opacity: 0;
+      z-index: 99;
+    }
+
+    .light03 {
+      transition: 0.5s;
+      width: 100%;
+      height: 3px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(2, 252, 73);
+      transform-origin: 0 0;
+      position: absolute;
+      left: 0;
+      opacity: 0;
+      z-index: 99;
+    }
+
+    .light04 {
+      transition: 0.5s;
+      width: 100%;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      position: absolute;
+      left: 0;
+      opacity: 0;
+      z-index: 99;
+    }
+
+    .light05 {
+      transition: 0.5s;
+      width: 100%;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      position: absolute;
+      left: 0;
+      opacity: 0;
+      z-index: 99;
+    }
+
+    .light06 {
+      transition: 0.5s;
+      width: 100%;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      position: absolute;
+      left: 0;
+      opacity: 0;
+      z-index: 99;
+    }
+
+    .light07 {
+      transition: 0.5s;
+      width: 100%;
+      height: 2px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 0 0;
+      position: absolute;
+      left: 0;
+      opacity: 0;
+      z-index: 99;
+    }
+
+    .light08 {
+      transition: 0.5s;
+      width: 100%;
+      height: 3px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 100% 0;
+      position: absolute;
+      right: 0;
+      transform: rotate(0deg);
+      right: 0;
+      opacity: 0;
+    }
+
+    .light09 {
+      transition: 0.5s;
+      width: 100%;
+      height: 3px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 100% 0;
+      position: absolute;
+      right: 0;
+      transform: rotate(0deg);
+      right: 0;
+      opacity: 0;
+    }
+
+    .light10 {
+      transition: 0.5s;
+      width: 100%;
+      height: 3px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 100% 0;
+      position: absolute;
+      right: 0;
+      transform: rotate(0deg);
+      right: 0;
+      opacity: 0;
+    }
+
+    .light11 {
+      transition: 0.5s;
+      width: 100%;
+      height: 3px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 100% 0;
+      position: absolute;
+      right: 0;
+      transform: rotate(0deg);
+      right: 0;
+      opacity: 0;
+    }
+
+    .light12 {
+      transition: 0.5s;
+      width: 100%;
+      height: 3px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 100% 0;
+      position: absolute;
+      right: 0;
+      transform: rotate(0deg);
+      right: 0;
+      opacity: 0;
+    }
+
+    .light13 {
+      transition: 0.5s;
+      width: 100%;
+      height: 3px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 100% 0;
+      position: absolute;
+      right: 0;
+      transform: rotate(0deg);
+      right: 0;
+      opacity: 0;
+    }
+
+    .light14 {
+      transition: 0.5s;
+      width: 100%;
+      height: 3px;
+      background-color: rgb(95, 215, 252);
+      box-shadow: 0 0 10px rgb(95, 215, 252);
+      transform-origin: 100% 0;
+      position: absolute;
+      right: 0;
+      transform: rotate(0deg);
+      right: 0;
+      opacity: 0;
+    }
+
+    .light-box:hover .light01 {
+      transform: rotate(20deg);
+      opacity: 1;
+    }
+
+    .light-box:hover .light02 {
+      transform: rotate(30deg);
+      opacity: 1;
+    }
+
+    .light-box:hover .light03 {
+      transform: rotate(40deg);
+      opacity: 1;
+    }
+
+    .light-box:hover .light04 {
+      transform: rotate(50deg);
+      background-color: rgb(2, 209, 255);
+      opacity: 1;
+    }
+
+    .light-box:hover .light05 {
+      transform: rotate(60deg);
+      opacity: 1;
+    }
+
+    .light-box:hover .light06 {
+      transform: rotate(70deg);
+      opacity: 1;
+    }
+
+    .light-box:hover .light07 {
+      transform: rotate(80deg);
+      background-color: rgb(2, 209, 255);
+      opacity: 1;
+    }
+
+    .light-box:hover .light08 {
+      transform: rotate(-20deg);
+      opacity: 1;
+    }
+
+    .light-box:hover .light09 {
+      transform: rotate(-30deg);
+      opacity: 1;
+    }
+
+    .light-box:hover .light10 {
+      transform: rotate(-40deg);
+      opacity: 1;
+    }
+
+    .light-box:hover .light11 {
+      transform: rotate(-50deg);
+      opacity: 1;
+    }
+
+    .light-box:hover .light12 {
+      transform: rotate(-60deg);
+      opacity: 1;
+    }
+
+    .light-box:hover .light13 {
+      transform: rotate(-70deg);
+      opacity: 1;
+    }
+
+    .light-box:hover .light14 {
+      transform: rotate(-80deg);
+      opacity: 1;
+    }
+
+    .button {
+      width: 60px;
+      height: 40px;
+      background-color: rgb(248, 0, 252);
+      box-shadow: 0 0 10px rgb(248, 0, 252);
+      margin: 20px auto;
+      border-radius: 20px;
+      text-align: center;
+      transition: 0.5s;
+      opacity: 0;
+    }
+
+    .button:hover {
+    }
+
+    .button02 {
+      width: 60px;
+      height: 40px;
+      background-color: rgb(0, 229, 255);
+      box-shadow: 0 0 10px rgb(0, 229, 255);
+      border-radius: 20px;
+      margin: 20px auto;
+      text-align: center;
+      opacity: 0;
+    }
+
+    .bigbox {
+      width: 200px;
+      margin: auto;
+      display: flex;
+      position: absolute;
+      bottom: -50px;
+      left: 50%;
+      transform: translate(-50%, -40px);
+      z-index: 99;
+    }
+
+    /* -------------michael-jackson-show01--------------- */
+
+    .michael-jackson-show01 {
+      width: 85%;
+      margin: 100px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+
+    .michael-jackson-show01-box:hover .michael-jackson-show01-img {
+      transform: rotate(0deg) translateX(60px);
+    }
+
+    .michael-jackson-show01-box:hover .michael-jackson-about {
+      opacity: 1;
+    }
+
+    .michael-jackson-show01-img {
+      width: 100%;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      transform: rotate(-30deg) translateX(0px);
+      transition: 0.8s;
+    }
+
+    .michael-jackson-show01-img img {
+      width: 180px;
+      transition: 0.8s;
+      /* transform:translateX(0px); */
+      /* margin: auto; */
+    }
+
+    .michael-jackson-show01-box {
+      margin: 50px auto 300px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      width: 70%;
+    }
+
+    .michael-jackson-about {
+      width: 80%;
+      color: white;
+      text-align: center;
+      margin-top: 50px;
+      font-size: 15px;
+      line-height: 1.5em;
+      letter-spacing: 1px;
+      opacity: 0;
+      transition: 1.5s;
+      /* margin-bottom: 100px; */
+    }
+
+    .michael-jackson-mv01 {
+      width: 60%;
+      margin: 0 auto 160px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 1s;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid white;
+    }
+
+    .michael-jackson-mv01:hover .michael-jackson-mv-face {
+      clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%);
+    }
+
+    .michael-jackson-mv01:hover .michael-jackson-mv-bg02 {
+      /* clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%); */
+      transform: scale(0);
+    }
+
+    .michael-jackson-mv01:hover .michael-jackson-mv-face-2 {
+      /* clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%); */
+      /* clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%); */
+      /* clip-path: polygon(100% 50%, 0 50%, 0 50%, 100% 50%);       */
+      clip-path: polygon(100% 50%, 0 50%, 0 48%, 0 50%, 100% 50%, 100% 51%);
+    }
+
+    .michael-jackson-mv01:hover .michael-jackson-mv-bg02-2 {
+      /* clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%); */
+      clip-path: polygon(50% 100%, 50% 100%, 50% 51%, 50% 0, 50% 0, 50% 50%);
+    }
+
+    .michael-jackson-mv-bg {
+      width: 100%;
+      position: absolute;
+      transform: 1s;
+    }
+
+    .michael-jackson-mv-bg02 {
+      width: 100%;
+      filter: grayscale(100%);
+      transition: 1.5s;
+      clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0% 50%);
+    }
+
+    .michael-jackson-mv-face {
+      width: 70%;
+      height: 25%;
+      border: 1px solid white;
+      background-color: rgba(0, 0, 0, 0.578);
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 1s;
+      clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0% 50%);
+    }
+
+    .michael-jackson-mv-bg02-2 {
+      width: 100%;
+      filter: grayscale(100%);
+      transition: 3s;
+      clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0% 50%);
+    }
+
+    .michael-jackson-mv-face-2 {
+      width: 70%;
+      height: 25%;
+      border: 1px solid white;
+      background-color: rgba(0, 0, 0, 0.578);
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 3s;
+      clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0% 50%);
+    }
+
+    .SmoothCriminal {
+      text-align: center;
+      font-size: 50px;
+      color: white;
+    }
+
+    /* -------------michael-jackson-show02--------------- */
+
+    .michael-jackson-show02 {
+      width: 50%;
+      margin: 0 auto 150px auto;
+    }
+
+    .michael-jackson-show02-img {
+      width: 400px;
+      height: 708px;
+      margin: auto;
+      position: relative;
+      background-color: rgb(252, 252, 252);
+      transition: 0.5s;
+      border-radius: 5px;
+    }
+
+    .michael-jackson-show02-img:hover {
+      background-color: goldenrod;
+      box-shadow: 0 0 15px goldenrod;
+    }
+
+    .michael-jackson-show02-img:hover .michael-jackson-show02-img00 {
+      /* filter: grayscale(0%); */
+    }
+
+    .michael-jackson-show02-img:hover .michael-jackson-show02-img01 {
+      filter: blur(0px) grayscale(100%);
+    }
+
+    .michael-jackson-show02-img:hover .michael-jackson-show02-img02 {
+      filter: blur(0px) grayscale(100%);
+    }
+
+    .michael-jackson-show02-img:hover .michael-jackson-show02-img03 {
+      filter: blur(0px) grayscale(100%);
+    }
+
+    .michael-jackson-show02-img:hover .michael-jackson-show02-img04 {
+      filter: blur(0px) grayscale(100%);
+    }
+
+    .michael-jackson-show02-img:hover .michael-jackson-show02-img05 {
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
+
+    .michael-jackson-show02-img00 {
+      width: 100%;
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      position: absolute;
+      filter: grayscale(100%);
+      transition: 1s;
+    }
+
+    .michael-jackson-show02-img01 {
+      width: 100%;
+      clip-path: polygon(0 51%, 49% 100%, 0 100%);
+      position: absolute;
+      filter: blur(5px);
+      transition: 1s;
+      border-radius: 5px;
+    }
+
+    .michael-jackson-show02-img02 {
+      width: 100%;
+      clip-path: polygon(100% 0, 100% 49%, 51% 0);
+      position: absolute;
+      filter: blur(5px);
+      transition: 1s;
+      border-radius: 5px;
+    }
+
+    .michael-jackson-show02-img03 {
+      width: 100%;
+      clip-path: polygon(0 0, 49% 0, 0 49%);
+      position: absolute;
+      filter: blur(5px);
+      transition: 1s;
+      border-radius: 5px;
+    }
+
+    .michael-jackson-show02-img04 {
+      width: 100%;
+      clip-path: polygon(51% 100%, 100% 51%, 100% 100%);
+      position: absolute;
+      filter: blur(5px);
+      transition: 1s;
+      border-radius: 5px;
+    }
+
+    .michael-jackson-show02-img05 {
+      width: 100%;
+      clip-path: polygon(50% 50%, 100% 50%, 50% 50%, 0% 50%);
+      position: absolute;
+      filter: grayscale(10%);
+      transition: 1.5s;
+    }
+
+    .mj-big-bg {
+      position: absolute;
+      top: -55px;
+      left: 20%;
+      width: 100%;
+      opacity: 0.1;
+    }
+
+    /* -------------.cha --------------- */
+
+    .tom-head {
+      position: absolute;
+      top: 10%;
+      left: 0;
+      width: 15%;
+      /* transform: translateX(-180px); */
+      transition: 0.5s;
+    }
+
+    .jerry-head {
+      position: absolute;
+      top: 60%;
+      right: 0;
+      width: 10%;
+      transform: translateX(180px);
+      transition: 0.5s;
+    }
+
+    .background-attachment {
+      width: 100%;
+      height: 100vh;
+      background: url(./Interim-report-img/Music/chopin/Chopin-bg01.jpeg) center
+        center / cover no-repeat;
+      background-attachment: fixed;
+      filter: sepia(50%);
+      position: relative;
+      display: none;
+      overflow: hidden;
+    }
+
+    .chopin-logo {
+      width: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .Chopins-sine {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50%;
+      filter: sepia(20%);
+    }
+
+    .chopin-about {
+      width: 50%;
+      margin: 200px auto 200px auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .chopin-about-img01 {
+      width: 50%;
+    }
+
+    .chopin-about-text {
+      color: white;
+      text-align: center;
+      font-size: 15px;
+      line-height: 1.5em;
+      letter-spacing: 1px;
+      margin-top: 50px;
+    }
+
+    .chopin-show {
+      width: 85%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .chpoin-show-img01 {
+      width: 30%;
+      position: relative;
+    }
+
+    .chopin-nosmile {
+      width: 100%;
+      filter: grayscale(100%);
+    }
+
+    .chopin-nosmile-2 {
+      width: 100%;
+    }
+
+    .chpoin-show-img02 {
+      width: 40%;
+      position: relative;
+    }
+
+    .chopin-hjc {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      transition: 0.8s;
+    }
+
+    .chopin-music {
+      width: 100%;
+      opacity: 1;
+    }
+
+    .transform {
+      transform: scale(-1);
+    }
+
+    .chpoin-show-text {
+      width: 30%;
+      color: #fff;
+      text-align: center;
+      position: relative;
+    }
+
+    .coding {
+      text-align: center;
+      opacity: 0;
+      transition: 0.8s;
+      position: absolute;
+      top: 10px;
+      left: 35%;
+    }
+
+    .music {
+      text-align: center;
+      opacity: 1;
+      transition: 0.8s;
+    }
+
+    /* --------------chopin-smile------------ */
+
+    .chopin-smile {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      transition: 0.8s;
+    }
+
+    .chopin-smile-sun {
+      width: 52%;
+      position: absolute;
+      top: 31%;
+      left: 40%;
+      transform-origin: 0 0;
+      transform: rotate(-180deg);
+      transition: 0.8s;
+      opacity: 0;
+    }
+
+    .chopin-show:hover .chopin-smile-sun {
+      opacity: 1;
+      transform: rotate(0deg);
+    }
+
+    .chopin-show:hover .chopin-smile {
+      opacity: 1;
+    }
+
+    .chopin-show:hover .chopin-hjc {
+      opacity: 1;
+    }
+
+    .chopin-show:hover .coding {
+      opacity: 1;
+    }
+
+    .chopin-show:hover .music {
+      opacity: 0;
+    }
+
+    /* --------------footer------------- */
+
+    footer {
+      width: 100%;
+      height: 60px;
+      background-color: rgb(0, 0, 0);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      position: relative;
+    }
+
+    footer p {
+      padding-top: 15px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* top-face-row------------ */
+
+    .top-face-row {
+      width: 100%;
+      height: 33.33%;
+      background-color: rgb(53, 53, 53);
+      /* filter: grayscale(90%)brightness(40%); */
+      outline: solid white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .face-mv1 {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+      outline: solid white;
+    }
+
+    .face-mv1 video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .face-mv2 {
+      width: 35%;
+      height: 100%;
+      object-fit: cover;
+      outline: solid white;
+    }
+
+    .face-mv2 video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .face-mv3 {
+      width: 35%;
+      height: 100%;
+      object-fit: cover;
+      outline: solid white;
+    }
+
+    .face-mv3 video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .face-mv4 {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+
+    .face-mv4 video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .mid-row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .tom-jerry-run {
+      width: 0%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 99;
+      transform: translate(200%, 0%);
+      transition: 2.4s;
+      display: block;
+    }
+
+    .tom-jerry-run-2 {
+      width: 10%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 99;
+      transform: translate(-200%, 0%) rotate(-90deg);
+      transition: 2.4s;
+    }
+
+    .tom-jerry-l {
+      width: 100%;
+    }
+
+    .tom-jerry-r {
+      width: 100%;
+    }
+
+    .chopin-nosmile {
+      width: 100%;
+    }
+
+    .chopin-nosmile-2 {
+      width: 100%;
+    }
+
+    .face-chopin {
+      width: 31%;
+      position: absolute;
+      /* top: -100px; */
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .mmmh63-bigbox {
+      width: 100%;
+      display: flex;
+    }
+
+    .easter-left {
+      width: 50%;
+      display: flex;
+      /* justify-content: center; */
+      align-items: center;
+    }
+
+    .cute-erry {
+      width: 20%;
+    }
+
+    .please {
+      width: 60%;
+    }
+
+    .cute-erry img {
+      width: 100%;
+    }
+
+    .easter-right {
+      width: 50%;
+      margin: 200px auto 0 auto;
+      color: rgb(255, 255, 255);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      opacity: 0;
+      transition: 0.5s;
+    }
+
+    .together {
+      width: 50%;
+      transition: 0.5s;
+    }
+
+    .together img {
+      width: 80%;
+    }
+
+    .mmmh63 {
+      width: 80%;
+    }
+
+    .cute-jerry {
+      width: 100px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+
+    .cute-jerry img {
+      width: 100%;
+    }
+  </style>
+
+  <body>
+    <nav class="navbar">
+      <p>Tom is a good cat</p>
+      <!-- <ul>
+            <li><a class="btn1" href="#bg01">Guns N Roses</a></li>
+            <li><a class="btn2" href="#bg02">Muse</a></li>
+            <li><a class="btn3" href="#bg03">Skrillex</a></li>
+            <li><a class="btn4" href="#bg04">MJ</a></li>
+            <li><a class="btn5" href="#bg05">Chopin</a></li>
+        </ul> -->
+    </nav>
+    <div class="wrap">
+      <div class="bar"></div>
+    </div>
+    <div class="container02 top">
+      <div class="row">
+        <div class="top-post-box">
+          <div class="top-post">
+            <div class="picture01 box1 box">
+              <img
+                class="tom-01"
+                src="./Interim-report-img/Music/tom-jerry/tom-02.png"
+                alt=""
+              />
+              <div class="warp-img">
+                <div class="warp-img-color"></div>
+                <img
+                  src="./Interim-report-img/Music/guns/30be9bfbcb40e2f213089268c6d2af90.jpeg"
+                  alt=""
+                />
+              </div>
+              <div class="name-1">
+                <p>
+                  <span class="sigle-color">G</span>uns N
+                  <span class="sigle-color">R</span>oses
+                </p>
+              </div>
+            </div>
+            <div class="picture02 box2 box">
+              <img
+                class="tom-02"
+                src="./Interim-report-img/Music/tom-jerry/tom-03.png"
+                alt=""
+              />
+
+              <div class="warp-img">
+                <div class="warp-img-color-2"></div>
+                <img
+                  src="./Interim-report-img/Music/muse/muse-big-bg-03.jpeg"
+                  alt=""
+                />
+              </div>
+              <div class="name-2">
+                <p><span class="sigle-color">M</span>use</p>
+              </div>
+            </div>
+            <div class="picture03 box1 box">
+              <img
+                class="tom-jerry"
+                src="./Interim-report-img/Music/tom-jerry/tom-jerry02.png"
+                alt=""
+              />
+
+              <div class="warp-img">
+                <div class="warp-img-color"></div>
+                <img
+                  src="./Interim-report-img/Music/skrillix/17be3c551b7211e89bd8008bbe6c9a19.jpeg"
+                  alt=""
+                />
+              </div>
+              <div class="name-3">
+                <p>
+                  <span class="sigle-color">S</span>kri<span class="sigle-color"
+                    >ll</span
+                  >ex
+                </p>
+              </div>
+            </div>
+            <div class="picture04 box2 box">
+              <img
+                class="jerry-02"
+                src="./Interim-report-img/Music/tom-jerry/jerry-03.png"
+                alt=""
+              />
+
+              <div class="warp-img">
+                <div class="warp-img-color-2"></div>
+                <img
+                  src="./Interim-report-img/Music/michael-jackson/mj-top-01.jpeg"
+                  alt=""
+                />
+              </div>
+              <div class="name-4">
+                <p>
+                  <span class="sigle-color">M</span>ichael
+                  <span class="sigle-color">J</span>ackson
+                </p>
+              </div>
+            </div>
+            <div class="picture05 box1 box">
+              <img
+                class="jerry-01"
+                src="./Interim-report-img/Music/tom-jerry/jerry-02.png"
+                alt=""
+              />
+              <div class="warp-img">
+                <div class="warp-img-color"></div>
+                <img
+                  src="./Interim-report-img/Music/muse/d82fd1c33f3bd95bf9d5a07ec6a3224b.jpeg"
+                  alt=""
+                />
+              </div>
+              <div class="name-5">
+                <p><span class="sigle-color">C</span>hopin</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="top-face">
+      <div class="top-face-row">
+        <div class="face-mv1">
+          <video
+            src="./Interim-report-img/Music/face/face-skrillex-2.mov"
+            autoplay
+            loop
+            muted
+          ></video>
+        </div>
+      </div>
+      <div class="top-face-row mid-row">
+        <div class="face-mv2">
+          
+          <video
+            src="./Interim-report-img/Music/face/face-guns.mov"
+            autoplay
+            loop
+            muted
+          ></video>
+        </div>
+        <div class="face-chopin">
+          <img
+            class="chopin-nosmile-2"
+            src="./Interim-report-img/Music/chopin/face-chopin-2.jpeg"
+            alt=""
+          />
+        </div>
+        <div class="face-mv3">
+          <video
+            src="./Interim-report-img/Music/face/mj-mv01.mov"
+            autoplay
+            loop
+            muted
+          ></video>
+        </div>
+      </div>
+      <div class="top-face-row">
+        <div class="face-mv4">
+          <video
+            src="./Interim-report-img/Music/face/face-muse.mov"
+            autoplay
+            loop
+            muted
+          ></video>
+        </div>
+      </div>
+
+      <!-- <div class="enter">
+            <p>Enter</p>
+        </div> -->
+    </div>
+    <div class="tom-jerry-run">
+      <img
+        class="tom-jerry-l"
+        src="./Interim-report-img/Music/tom-jerry/tom-jerry-run-l-2.png"
+        alt=""
+      />
+    </div>
+    <div class="enter">
+      <p>Enter</p>
+    </div>
+    <div class="top-face02 face-box-sh">
+      <div class="dino-logo2">
+        <div class="dino-logo">
+          <p>
+            Take me down to the <span class="color-gold">paradise city</span
+            ><br />
+            Where the grass is green and the girls are pretty
+          </p>
+        </div>
+      </div>
+
+      <div class="top-face-row grayscale">
+        <div class="face-mv1">
+          <video
+            src="./Interim-report-img/Music/face/face-skrillex-2.mov"
+            autoplay
+            loop
+            muted
+          ></video>
+        </div>
+      </div>
+      <div class="top-face-row mid-row grayscale">
+        <div class="face-mv2">
+          <video
+            src="./Interim-report-img/Music/face/face-guns.mov"
+            autoplay
+            loop
+            muted
+          ></video>
+        </div>
+        <div class="face-chopin">
+          <img
+            class="chopin-nosmile"
+            src="./Interim-report-img/Music/chopin/face-chopin-2.jpeg"
+            alt=""
+          />
+        </div>
+        <div class="face-mv3">
+          <video
+            src="./Interim-report-img/Music/face/mj-mv01.mov"
+            autoplay
+            loop
+            muted
+          ></video>
+        </div>
+      </div>
+      <div class="top-face-row grayscale">
+        <div class="face-mv4">
+          <video
+            src="./Interim-report-img/Music/face/face-muse.mov"
+            autoplay
+            loop
+            muted
+          ></video>
+        </div>
+      </div>
+
+      <!-- <div class="enter">
+            <p>Enter</p>
+        </div> -->
+    </div>
+    <div class="speace-light"></div>
+    <!-- -----------------------------------guns -->
+
+    <div id="bg01" class="speace-box"></div>
+    <div class="container gun">
+      <div class="row02 guns-bder">
+        <div class="guns-logo">
+          <div class="logo-bgc">
+            <img
+              class="guns-logo05"
+              src="./Interim-report-img/Music/guns/guns-logo09.png"
+              alt=""
+            />
+          </div>
+          <img
+            class="guns-logo04 000"
+            src="./Interim-report-img/Music/guns/guns-logo08.png"
+            alt=""
+          />
+          <div class="guns-logo-about">
+            The history of Guns N Roses <br />
+            To truly understand the meaning behind the Guns N Roses logo one
+            must have a sense of the history of the band, their members and
+            their joint mission.
+          </div>
+        </div>
+        <div class="guns-about-bg02">
+          <img src="./Interim-report-img/Music/guns/bg03.png" alt="" />
+        </div>
+        <div class="guns-about">
+          <div class="guns-about01">
+            <div class="guns-mv01">
+              <video
+                src="./Interim-report-img/Music/guns/guns-mv01.mov"
+                autoplay
+                loop
+                muted
+              ></video>
+            </div>
+            <div class="guns-text">
+              <span class="guns-text-name">Sweet Child O' Mine </span> <br />
+              <br />She's got a smile that it seems to me Reminds me of
+              childhood memories <br />
+              Where everything was as fresh as the bright blue sky
+            </div>
+          </div>
+          <div class="guns-about02">
+            <div class="guns-text">
+              <span class="guns-text-name">Patience</span> <br />
+              <br />
+              Said woman take it slow and things will be just fine <br />
+              You and I'll just use a little patience
+            </div>
+            <div class="guns-mv02">
+              <video
+                src="./Interim-report-img/Music/guns/guns-mv02.mov"
+                autoplay
+                loop
+                muted
+              ></video>
+            </div>
+          </div>
+          <div class="guns-about03">
+            <div class="guns-mv01">
+              <video
+                src="./Interim-report-img/Music/guns/guns-mv03.mov"
+                autoplay
+                loop
+                muted
+              ></video>
+            </div>
+            <div class="guns-text">
+              <span class="guns-text-name">Paradise City</span> <br />
+              <br />Take me down to the paradise city <br />
+              Where the grass is green and the girls are pretty <br />
+              Take me home
+            </div>
+          </div>
+        </div>
+        <div class="row01">
+          <div class="guns-show">
+            <div class="guns-show-img1">
+              <img
+                src="./Interim-report-img/Music/guns/bf59594d72b858b79d91c3c43e261eb4.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="guns-show-img2">
+              <img
+                src="./Interim-report-img/Music/guns/55ed9475e555be6f230b5ef54dcc3bd0.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="guns-show-img3">
+              <img
+                src="./Interim-report-img/Music/guns/a3f43abc8f18d97d57e956778debae7e.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="guns-show-img4">
+              <img
+                src="./Interim-report-img/Music/guns/e34e61959ffa33bb275443b607fd7690.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="guns-show-img5">
+              <img
+                src="./Interim-report-img/Music/guns/guns-n-roses-axl-rose-slash-duff-mckagan-steven-adler-old-photo-2020-1200x900.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="guns-show-img6">
+              <img
+                src="./Interim-report-img/Music/guns/a6d3779cafa7bc1f7c320424e2fbc2f3.jpg"
+                alt=""
+              />
+            </div>
+            <div class="guns-show-img7">
+              <img
+                src="./Interim-report-img/Music/guns/b0a1168df3ab2de9e8945c2db28889fe.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="guns-show-img8">
+              <img
+                src="./Interim-report-img/Music/guns/dfb20dac425c8e76baacf09956d32338.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="guns-show-img9">
+              <img
+                src="./Interim-report-img/Music/guns/a3f27075b7742154603eebad3f29e1cf.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="guns-show-img10">
+              <img
+                src="./Interim-report-img/Music/guns/c78ee4d0c59529e13b35d9802bc33ad4.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="guns-show-img11">
+              <img
+                src="./Interim-report-img/Music/guns/3de803faaf1b7204e8012d39c334e139.jpg"
+                alt=""
+              />
+            </div>
+            <div class="guns-show-img12">
+              <img
+                src="./Interim-report-img/Music/guns/BA26-1613432154-scaled.jpeg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="speace-light"></div>
+    <!-- -------------------------------------------muse-- -->
+    <div id="bg02" class="speace-box"></div>
+    <div class="container mus muse-box-sh">
+      <div class="row02">
+        <div class="muse-logo">
+          <img
+            class="muse-logo-img01"
+            src="./Interim-report-img/Music/muse/muse-logo09.png"
+            alt=""
+          />
+          <img
+            class="muse-logo-img02"
+            src="./Interim-report-img/Music/muse/muse-logo04.png"
+            alt=""
+          />
+          <a href="https://en.wikipedia.org/wiki/Muse_(band)" target="_blank">
+            <div class="muse-text">
+              Muse are an English rock band from Teignmouth, <br />
+              Devon, formed in 1994. <br />
+              The band consists of Matt Bellamy <br />
+              (lead vocals, guitar, keyboards) <br />
+              Chris Wolstenholme <br />
+              (bass guitar, backing vocals) <br />
+              Dominic Howard <br />
+              (drums).
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="muse-about">
+          <!-- <div class="muse-big-bg">
+                    <img src="./Interim-report-img/Music/muse/muse-big-bg02.png" alt="">
+                </div> -->
+
+          <div class="muse-about-img01">
+            <div class="muse-mv-name">
+              <div class="muse-mv-name01">Madness</div>
+              <div class="muse-mv-name02">
+                Come to me. Trust in a dream. Come on and rescue me <br />
+                Yes I know, I can be wrong <br />
+                And maybe I'm too headstrong <br />
+                Our love is Madness.
+              </div>
+            </div>
+            <a
+              class="muse-clip"
+              href="https://www.youtube.com/watch?v=Ek0SgwWmF9w"
+              target="_blank"
+              ><video
+                class="muse-mv011"
+                src="./Interim-report-img/Music/muse/muse-about-mv03.mov"
+                autoplay
+                loop
+                muted
+              ></video>
+            </a>
+            <a
+              href="https://www.youtube.com/watch?v=Ek0SgwWmF9w"
+              target="_blank"
+              ><video
+                class="muse-mv01"
+                src="./Interim-report-img/Music/muse/muse-about-mv03.mov"
+                autoplay
+                loop
+                muted
+              ></video>
+            </a>
+          </div>
+          <div class="muse-about-img02">
+            <div class="muse-mv-name">
+              <div class="muse-mv-name01 transform-x-135">Mercy</div>
+              <div class="muse-mv-name02 transform-x-135">
+                Show me mercy, can someone rescue me? <br />
+                Show me mercy <br />
+                Show me mercy, please <br />
+              </div>
+            </div>
+            <a
+              class="muse-clip"
+              href="https://www.youtube.com/watch?v=Ek0SgwWmF9w"
+              target="_blank"
+              ><video
+                class="muse-mv022"
+                src="./Interim-report-img/Music/muse/muse-about-mv04.mov"
+                autoplay
+                loop
+                muted
+              ></video>
+            </a>
+
+            <a href=""
+              ><video
+                class="muse-mv02"
+                src="./Interim-report-img/Music/muse/muse-about-mv04.mov"
+                autoplay
+                loop
+                muted
+              ></video>
+            </a>
+          </div>
+          <div class="muse-about-img03">
+            <div class="muse-mv-name">
+              <div class="muse-mv-name01">Supremacy</div>
+              <div class="muse-mv-name02">
+                Wake to see <br />
+                Your true emancipation is a fantasy <br />
+                Policies <br />
+                Have risen up and overcome the brave
+              </div>
+            </div>
+            <a
+              class="muse-clip"
+              href="https://www.youtube.com/watch?v=Ek0SgwWmF9w"
+              target="_blank"
+              ><video
+                class="muse-mv033"
+                src="./Interim-report-img/Music/muse/muse-about-mv02.mov"
+                autoplay
+                loop
+                muted
+              ></video>
+            </a>
+            <a href=""
+              ><video
+                class="muse-mv03"
+                src="./Interim-report-img/Music/muse/muse-about-mv02.mov"
+                autoplay
+                loop
+                muted
+              ></video>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="muse-show">
+          <div class="muse-show-img">
+            <img
+              class="guiter-bg"
+              src="./Interim-report-img/Music/muse/muse-guiter.jpeg"
+              alt=""
+            />
+            <div class="muse-show-bg">
+              <div class="guiter-left-box">
+                <p class="guiter01 guiter-left">Muse</p>
+                <p class="guiter02 guiter-left">Muse are an English rock</p>
+                <p class="guiter03 guiter-left">band from Teignmouth</p>
+                <p class="guiter04 guiter-left">Devon formed in 1994</p>
+                <p class="guiter05 guiter-left">The band consists of</p>
+                <p class="guiter06 guiter-left">Matt Bellamy</p>
+                <p class="guiter07 guiter-left">Chris</p>
+                <p class="guiter08 guiter-left">Wolstenholme</p>
+                <p class="guiter09 guiter-left">and</p>
+                <p class="guiter10 guiter-left">Dominic</p>
+                <p class="guiter11 guiter-left">Howard</p>
+                <p class="guiter12 guiter-left">Muse released</p>
+                <p class="guiter13 guiter-left">their</p>
+                <p class="guiter14 guiter-left">debut</p>
+                <p class="guiter15 guiter-left">album,</p>
+                <p class="guiter16 guiter-left">Showbiz</p>
+                <p class="guiter17 guiter-left">1999</p>
+                <p class="guiter18 guiter-left">showcasing</p>
+                <p class="guiter19 guiter-left">Bellamy</p>
+                <p class="guiter20 guiter-left">falsetto and</p>
+                <p class="guiter21 guiter-left">melancholic style</p>
+                <p class="guiter22 guiter-left">Their second album</p>
+                <p class="guiter23 guiter-left">Origin</p>
+                <p class="guiter24 guiter-left">Wolstenholmeer</p>
+                <p class="guiter25 guiter-left">Matt</p>
+                <p class="guiter26 guiter-left">English</p>
+                <p class="guiter27 guiter-left">and</p>
+                <p class="guiter28 guiter-left">CW</p>
+                <p class="guiter29 guiter-left">MB</p>
+                <p class="guiter30 guiter-left">Muse</p>
+                <p class="guiter31 guiter-left">DH</p>
+                <p class="guiter32 guiter-left">and</p>
+                <p class="guiter33 guiter-left">DH</p>
+                <p class="guiter34 guiter-left">Matt</p>
+                <p class="guiter35 guiter-left">Bellamy</p>
+                <p class="guiter36 guiter-left">Muse</p>
+                <p class="guiter37 guiter-left">English</p>
+              </div>
+              <div class="guiter-right-box">
+                <p class="guiter-2-01 guiter-right">Grammy</p>
+                <p class="guiter-2-02 guiter-right">concept album rock</p>
+                <p class="guiter-2-03 guiter-right">band from Teignmouth</p>
+                <p class="guiter-2-04 guiter-right">Devon formed in 1994</p>
+                <p class="guiter-2-05 guiter-right">The band consists of</p>
+                <p class="guiter-2-06 guiter-right">Matt Bellamy</p>
+                <p class="guiter-2-07 guiter-right">possessed</p>
+                <p class="guiter-2-08 guiter-right">Achievement</p>
+                <p class="guiter-2-09 guiter-right">and</p>
+                <p class="guiter-2-10 guiter-right">Dominic</p>
+                <p class="guiter-2-11 guiter-right">Howard</p>
+                <p class="guiter-2-12 guiter-right">Muse released</p>
+                <p class="guiter-2-13 guiter-right">their</p>
+                <p class="guiter-2-14 guiter-right">debut</p>
+                <p class="guiter-2-15 guiter-right">album,</p>
+                <p class="guiter-2-16 guiter-right">Showbiz</p>
+                <p class="guiter-2-17 guiter-right">Their second</p>
+                <p class="guiter-2-18 guiter-right">showcasing</p>
+                <p class="guiter-2-19 guiter-right">Bellamy</p>
+                <p class="guiter-2-20 guiter-right">falsetto and</p>
+                <p class="guiter-2-21 guiter-right">style</p>
+                <p class="guiter-2-22 guiter-right">album</p>
+                <p class="guiter-2-23 guiter-right">Rolling</p>
+                <p class="guiter-2-24 guiter-right">rock</p>
+                <p class="guiter-2-25 guiter-right">Devon</p>
+                <p class="guiter-2-26 guiter-right">Howard</p>
+                <p class="guiter-2-27 guiter-right">Dominic</p>
+                <p class="guiter-2-28 guiter-right">Howard</p>
+                <p class="guiter-2-29 guiter-right">debut</p>
+                <p class="guiter-2-30 guiter-right">Grammy</p>
+                <p class="guiter-2-31 guiter-right">Matt</p>
+                <p class="guiter-2-32 guiter-right">Muse</p>
+                <p class="guiter-2-33 guiter-right">Rolling</p>
+                <p class="guiter-2-34 guiter-right">Showbiz</p>
+                <p class="guiter-2-35 guiter-right">style</p>
+                <p class="guiter-2-36 guiter-right">Showbiz</p>
+                <p class="guiter-2-37 guiter-right">Grammy</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="speace-light"></div>
+    <!-- -------------------------------------------muse-- -->
+    <div id="bg03" class="speace-box"></div>
+    <div class="container skrii">
+      <div class="row01 skrillex-box-sh">
+        <div class="skrillex-logo">
+          <img
+            class="skrillex-logo-01"
+            src="./Interim-report-img/Music/skrillix/skrillex-logo-01.png"
+            alt=""
+          />
+          <img
+            class="skrillex-logo-02"
+            src="./Interim-report-img/Music/skrillix/skrillex-logo-02.png"
+            alt=""
+          />
+          <div class="skrillex-text">
+            Sonny John Moore <br />
+            (born January 15, 1988) <br />
+            known professionally as Skrillex, is an American DJ, record
+            producer, musician, singer and songwriter. Growing up in Northeast
+            Los Angeles and in Northern California
+          </div>
+        </div>
+        <div class="row01"></div>
+        <div class="row">
+          <div class="skrillex-show01">
+            <div class="skrillex-show01-img">
+              <img
+                class="skrillex-show01-bg"
+                src="./Interim-report-img/Music/skrillix/skriilex-logoshow-.jpeg"
+                alt=""
+              />
+              <div class="skrillex-logoshow">
+                <div class="skrillex-line01"></div>
+                <div class="skrillex-line02"></div>
+                <div class="skrillex-line03"></div>
+                <div class="skrillex-line04"></div>
+                <div class="skrillex-line05"></div>
+                <div class="skrillex-line06"></div>
+                <div class="skrillex-line07"></div>
+              </div>
+              <div class="skrillex-logoshow2"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row01 padding-bm">
+          <div class="skrillex-show02">
+            <div class="skrillex-show02-img">
+              <div class="side-light01 red blue z-index-99">
+                <div class="super-light01 red blue z-index-99"></div>
+                <div class="super-light01-2 red blue z-index-99"></div>
+              </div>
+              <div class="side-light01 red blue">
+                <div class="super-light02 red blue"></div>
+                <div class="super-light02-2 red blue"></div>
+              </div>
+              <div class="side-light01 red blue">
+                <div class="super-light03 red blue"></div>
+                <div class="super-light03-2 red blue"></div>
+              </div>
+              <div class="side-light01 red blue">
+                <div class="super-light04 red blue"></div>
+                <div class="super-light04-2 red blue"></div>
+              </div>
+              <div class="side-light01 red blue">
+                <div class="super-light05 red blue"></div>
+                <div class="super-light05-2 red blue"></div>
+              </div>
+              <div class="side-light01 red blue">
+                <div class="super-light06 red blue"></div>
+                <div class="super-light06-2 red blue"></div>
+              </div>
+              <div class="side-light01 red blue">
+                <div class="super-light07 red blue"></div>
+                <div class="super-light07-2 red blue"></div>
+              </div>
+              <div class="side-light01 red blue">
+                <div class="super-light08 red blue"></div>
+                <div class="super-light08-2 red blue"></div>
+              </div>
+              <div class="side-light01 red blue">
+                <div class="super-light09 red blue"></div>
+                <div class="super-light09-2 red blue"></div>
+              </div>
+              <div class="side-light01 red blue">
+                <div class="super-light10 red blue"></div>
+                <div class="super-light10-2 red blue"></div>
+              </div>
+              <div class="side-light01 red blue">
+                <div class="super-light11 red blue"></div>
+                <div class="super-light11-2 red blue"></div>
+              </div>
+              <div class="side-light01 red blue">
+                <div class="super-light12 red blue"></div>
+                <div class="super-light12-2 red blue"></div>
+              </div>
+              <div class="side-light01 red blue">
+                <div class="super-light13 red blue"></div>
+                <div class="super-light13-2 red blue"></div>
+              </div>
+              <div class="side-light01 red blue">
+                <div class="super-light14 red blue"></div>
+                <div class="super-light14-2 red blue"></div>
+              </div>
+              <div class="side-light01 red blue">
+                <div class="super-light15 red blue"></div>
+                <div class="super-light15-2 red blue"></div>
+              </div>
+              <div class="side-light01 red blue">
+                <div class="super-light16 red blue"></div>
+                <div class="super-light16-2 red blue"></div>
+              </div>
+              <!-- --------------------------- -->
+              <div class="position-ab transform z-index-99">
+                <div class="side-light01 red blue z-index-99">
+                  <div class="super-light01 red blue z-index-99"></div>
+                  <div class="super-light01-2 red blue z-index-99"></div>
+                </div>
+                <div class="side-light01 red blue">
+                  <div class="super-light02 red blue"></div>
+                  <div class="super-light02-2 red blue"></div>
+                </div>
+                <div class="side-light01 red blue">
+                  <div class="super-light03 red blue"></div>
+                  <div class="super-light03-2 red blue"></div>
+                </div>
+                <div class="side-light01 red blue">
+                  <div class="super-light04 red blue"></div>
+                  <div class="super-light04-2 red blue"></div>
+                </div>
+                <div class="side-light01 red blue">
+                  <div class="super-light05 red blue"></div>
+                  <div class="super-light05-2 red blue"></div>
+                </div>
+                <div class="side-light01 red blue">
+                  <div class="super-light06 red blue"></div>
+                  <div class="super-light06-2 red blue"></div>
+                </div>
+                <div class="side-light01 red blue">
+                  <div class="super-light07 red blue"></div>
+                  <div class="super-light07-2 red blue"></div>
+                </div>
+                <div class="side-light01 red blue">
+                  <div class="super-light08 red blue"></div>
+                  <div class="super-light08-2 red blue"></div>
+                </div>
+                <div class="side-light01 red blue">
+                  <div class="super-light09 red blue"></div>
+                  <div class="super-light09-2 red blue"></div>
+                </div>
+                <div class="side-light01 red blue">
+                  <div class="super-light10 red blue"></div>
+                  <div class="super-light10-2 red blue"></div>
+                </div>
+                <div class="side-light01 red blue">
+                  <div class="super-light11 red blue"></div>
+                  <div class="super-light11-2 red blue"></div>
+                </div>
+                <div class="side-light01 red blue">
+                  <div class="super-light12 red blue"></div>
+                  <div class="super-light12-2 red blue"></div>
+                </div>
+                <div class="side-light01 red blue">
+                  <div class="super-light13 red blue"></div>
+                  <div class="super-light13-2 red blue"></div>
+                </div>
+                <div class="side-light01 red blue">
+                  <div class="super-light14 red blue"></div>
+                  <div class="super-light14-2 red blue"></div>
+                </div>
+                <div class="side-light01 red blue">
+                  <div class="super-light15 red blue"></div>
+                  <div class="super-light15-2 red blue"></div>
+                </div>
+                <div class="side-light01 red blue">
+                  <div class="super-light16 red blue"></div>
+                  <div class="super-light16-2 red blue"></div>
+                </div>
+              </div>
+              <div class="light-box">
+                <div class="light01 red blue z-index-99"></div>
+                <div class="light02 red blue z-index-99"></div>
+                <div class="light03 red blue z-index-99"></div>
+                <div class="light04 red blue z-index-99"></div>
+                <div class="light05 red blue z-index-99"></div>
+                <div class="light06 red blue z-index-99"></div>
+                <div class="light07 red blue z-index-99"></div>
+                <div class="light08 red blue z-index-99"></div>
+                <div class="light09 red blue z-index-99"></div>
+                <div class="light10 red blue z-index-99"></div>
+                <div class="light11 red blue z-index-99"></div>
+                <div class="light12 red blue z-index-99"></div>
+                <div class="light13 red blue z-index-99"></div>
+                <div class="light14 red blue z-index-99"></div>
+                <div class="bigbox">
+                  <div class="button"></div>
+                  <div class="button02"></div>
+                </div>
+
+                <video
+                  class="skrillex-show02-img01"
+                  src="./Interim-report-img/Music/skrillix/skrilex-mv001.mov"
+                  autoplay
+                  loop
+                  muted
+                ></video>
+                <a
+                  href="https://www.youtube.com/watch?v=fDrTbLXHKu8"
+                  target="_blank"
+                >
+                  <img
+                    class="skrillex-show02-img02"
+                    src="./Interim-report-img/Music/skrillix/skrillex-show-img03.png"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="speace-light"></div>
+    <!-- -------------------------------------------muse-- -->
+    <div id="bg04" class="speace-box"></div>
+
+    <div class="container mic">
+      <div class="row mj-bder">
+        <!-- <div class="mj-big-bg">
+                <img src="./Interim-report-img/Music/michael-jackson/mj-big-bg02.png" alt="">
+            </div> -->
+        <div class="michael-jackson-show01">
+          <div class="michael-jackson-show01-box">
+            <div class="michael-jackson-show01-img">
+              <img
+                src="./Interim-report-img/Music/michael-jackson/45dg02.png"
+                alt=""
+              />
+            </div>
+            <div class="michael-jackson-about">
+              Michael Joseph Jackson (August 29, 1958 – June 25, 2009) was an
+              American singer, songwriter, and dancer. <br />
+              Dubbed the "King of Pop", he is regarded as one of the most
+              significant cultural figures of the 20th century.
+            </div>
+          </div>
+          <div class="michael-jackson-mv01">
+            <video
+              class="michael-jackson-mv-bg"
+              src="./Interim-report-img/Music/michael-jackson/mj-mv01.mov"
+              autoplay
+              loop
+              muted
+            ></video>
+            <video
+              class="michael-jackson-mv-bg02"
+              src="./Interim-report-img/Music/michael-jackson/mj-mv01.mov"
+              autoplay
+              loop
+              muted
+            ></video>
+            <div class="michael-jackson-mv-face">
+              <div class="SmoothCriminal">Smooth Criminal</div>
+            </div>
+          </div>
+          <div class="michael-jackson-mv01">
+            <video
+              class="michael-jackson-mv-bg"
+              src="./Interim-report-img/Music/michael-jackson/mj-mv02.mov"
+              autoplay
+              loop
+              muted
+            ></video>
+            <video
+              class="michael-jackson-mv-bg02-2"
+              src="./Interim-report-img/Music/michael-jackson/mj-mv02.mov"
+              autoplay
+              loop
+              muted
+            ></video>
+            <div class="michael-jackson-mv-face-2">
+              <div class="SmoothCriminal">Beat It</div>
+            </div>
+          </div>
+        </div>
+        <div class="michael-jackson-show02">
+          <div class="michael-jackson-show02-img">
+            <img
+              class="michael-jackson-show02-img00"
+              src="./Interim-report-img/Music/michael-jackson/7289eacb94fe1ad84604fee6a6d6220c.jpeg"
+              alt=""
+            />
+            <img
+              class="michael-jackson-show02-img01"
+              src="./Interim-report-img/Music/michael-jackson/7289eacb94fe1ad84604fee6a6d6220c.jpeg"
+              alt=""
+            />
+            <img
+              class="michael-jackson-show02-img02"
+              src="./Interim-report-img/Music/michael-jackson/7289eacb94fe1ad84604fee6a6d6220c.jpeg"
+              alt=""
+            />
+            <img
+              class="michael-jackson-show02-img03"
+              src="./Interim-report-img/Music/michael-jackson/7289eacb94fe1ad84604fee6a6d6220c.jpeg"
+              alt=""
+            />
+            <img
+              class="michael-jackson-show02-img04"
+              src="./Interim-report-img/Music/michael-jackson/7289eacb94fe1ad84604fee6a6d6220c.jpeg"
+              alt=""
+            />
+            <img
+              class="michael-jackson-show02-img05"
+              src="./Interim-report-img/Music/michael-jackson/7289eacb94fe1ad84604fee6a6d6220c.jpeg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="background-attachment">
+      <img
+        class="Chopins-sine"
+        src="./Interim-report-img/Music/chopin/Chopins-sine01.png"
+        alt=""
+      />
+      <img
+        class="tom-head"
+        src="./Interim-report-img/Music/tom-jerry/tom-head.png"
+        alt=""
+      />
+      <img
+        class="jerry-head"
+        src="./Interim-report-img/Music/tom-jerry/jerry-haad.png"
+        alt=""
+      />
+
+      <div class="chopin-logo"></div>
+    </div>
+    <!-- -------------------------------------------muse-- -->
+    <div id="bg05" class="speace-box"></div>
+    <div class="container chop">
+      <div class="row">
+        <div class="chopin-about">
+          <img
+            class="chopin-about-img01"
+            src="./Interim-report-img/Music/chopin/Chopin-about01.jpeg"
+            alt=""
+          />
+          <p class="chopin-about-text">
+            Frédéric François Chopin <br />(born Fryderyk Franciszek Chopin1
+            March 1810 – 17 October 1849) <br />
+            was a Polish composer and virtuoso pianist of the Romantic period
+            who wrote primarily for solo piano.
+          </p>
+        </div>
+      </div>
+      <div class="row"></div>
+      <div class="row">
+        <div class="chopin-show">
+          <div class="chpoin-show-img01">
+            <img
+              class="chopin-nosmile"
+              src="./Interim-report-img/Music/chopin/chpoin-show-img01.jpeg"
+              alt=""
+            />
+            <img
+              class="chopin-smile"
+              src="./Interim-report-img/Music/chopin/chopin-smile02.png"
+              alt=""
+            />
+            <img
+              class="chopin-smile-sun"
+              src="./Interim-report-img/Music/chopin/chopin-smile02-sun.png"
+              alt=""
+            />
+          </div>
+          <div class="chpoin-show-text">
+            <div class="music">
+              The Polonaise in A♭ major, Op. 53 <br />
+              (French: Polonaise héroïque, Heroic Polonaise; Polish: Heroiczny)
+            </div>
+            <div class="coding">Coding is good.<br />:D</div>
+          </div>
+          <div class="chpoin-show-img02">
+            <img
+              class="chopin-music"
+              src="./Interim-report-img/Music/chopin/chpoin-show-img03.png"
+              alt=""
+            />
+            <img
+              class="chopin-hjc"
+              src="./Interim-report-img/Music/chopin/chpoin-show-img06.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="mmmh63-bigbox">
+          <div class="easter-right">
+            <div class="together">
+              <img
+                src="./Interim-report-img/Music/tom-jerry/tougher.png"
+                alt=""
+              />
+            </div>
+            <div class="mmmh63">
+              <p>
+                For MMMH63 <br />
+                <br />
+                如果作業讓你頭痛 沒事的 我陪你一起痛 :D <br />
+                同學們加油! 離結訓不遠了! <br />
+                pry-pry
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="cute-jerry">
+        <img
+          src="./Interim-report-img/Music/tom-jerry/cute-jerry-2.png"
+          alt=""
+        />
+      </div>
+      <p>This is footer :D</p>
+    </footer>
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script>
+      $(window).scroll(function () {
+        console.log("scrollTop", $(window).scrollTop());
+        // console.log('window height', $(window).height());
+        // console.log('body height', $('body').height());
+
+        const scorllTop = $(window).scrollTop();
+        const widowHeight = $(window).height();
+        const bodyHeight = $("body").height();
+        // console.log('scrollTop/ widow height', `${Math.floor(scorllTop / (bodyHeight - widowHeight) * 100)}%`);
+        $(".bar").css(
+          "width",
+          `${(scorllTop / (bodyHeight - widowHeight)) * 100}%`
+        );
+
+        if (scorllTop > 1850) {
+          $(".guns-about01").css("transform", "scale(1)");
+        } else {
+          $(".guns-about01").css("transform", "scale(0)");
+        }
+        if (scorllTop > 2500) {
+          $(".guns-about02").css("transform", "scale(1) rotate(360deg)");
+        } else {
+          $(".guns-about02").css("transform", "scale(0) rotate(0)");
+        }
+        if (scorllTop > 3150) {
+          $(".guns-about03").css("transform", "scale(1) translateX(0px)");
+        } else {
+          $(".guns-about03").css("transform", "scale(0) translateX(-1200px)");
+        }
+        if (scorllTop > 17340) {
+          $(".tom-head").css("transform", "translateX(0px)");
+        } else {
+          $(".tom-head").css("transform", "translateX(-180px)");
+        }
+        if (scorllTop > 17620) {
+          $(".jerry-head").css("transform", "translateX(0px)");
+        } else {
+          $(".jerry-head").css("transform", "translateX(180px)");
+        }
+        // ----------------muse
+      });
+      // -----------------------------------------------
+      $(".enter").click(function () {
+        // $('.top-face').css('clip-path', 'polygon(60% 40%, 100% 0%, 35% 65%, 0% 100%)');
+        $(".top-face").css(
+          "clip-path",
+          "polygon(0 0, 100% 0%, 100% 100%, 100% 0)"
+        );
+        // $('.enter').css('transform','scale(0)');
+        $(".enter").css("opacity", "0");
+        $(".navbar").css("opacity", "1");
+        $(".container").css("display", "block");
+        $(".speace-light").css("display", "block");
+        $(".background-attachment").css("display", "block");
+        $("footer").css("display", "block");
+        $(".speace-box").css("display", "block");
+        $(".top-post-box").css("height", "800px");
+        $(".tom-jerry-run-2").css(
+          "transform",
+          "translate(1000%,-480%)rotate(-90deg)"
+        );
+        $("body").css("overflow", "auto");
+      });
+      $(".enter").hover(function () {
+        $(".top-face02").css(
+          "clip-path",
+          "polygon(0 0, 0 100%, 100% 100%, 0% 100%)"
+        );
+        $(".tom-jerry-run").css("transform", "translate(-1000%,480%)");
+        $(".tom-jerry-run").css("width", "10%");
+      });
+      // --------------------------------
+
+      $(".button").click(function () {
+        $(".red").css("background-color", "rgb(252, 63, 236)");
+        $(".big-light-box").css("border", "1px solid rgb(252, 63, 236)");
+        // $('.light-box').css('box-shadow', '0 0 50px rgb(252, 63, 236) inset');
+        $(".big-light-box").css(
+          "box-shadow",
+          "0 0 100px rgb(252, 63, 236) inset"
+        );
+        $(".skrillex-box-sh").css(
+          "box-shadow",
+          "0 0 50px rgb(252, 63, 236) inset "
+        );
+        $(".skrillex-show02-img").css("border", " 1px solid rgb(252, 63, 236)");
+        $(".skrillex-box-sh").css("border", "3px solid rgb(252, 63, 236)");
+      });
+      $(".button02").click(function () {
+        $(".blue").css("background-color", "rgb(95, 215, 252)");
+        $(".big-light-box").css("border", "1px solid rgb(95, 215, 252)");
+        // $('.light-box').css('box-shadow', '0 0 50px rgb(95, 215, 252) inset');
+        $(".big-light-box").css(
+          "box-shadow",
+          "0 0 100px rgb(95, 215, 252) inset"
+        );
+        $(".skrillex-box-sh").css(
+          "box-shadow",
+          "0 0 50px rgb(95, 215, 252) inset "
+        );
+        $(".skrillex-show02-img").css("border", " 1px solid rgb(95, 215, 252)");
+        // $('.skrillex-show02-img').css('box-shadow', '0 0 50px rgb(95, 215, 252) inset ');
+        $(".skrillex-box-sh").css("border", "3px solid rgb(95, 215, 252)");
+      });
+      $(".cute-jerry").click(function () {
+        $(".easter-right").css("opacity", "1");
+      });
+
+      // ---------muse-logo
+
+      $(".muse-logo").hover(function () {
+        $(".muse-box-sh").css("box-shadow", "0 0 30px rgb(30, 223, 248) inset");
+        $(".muse-box-sh").css("border", "1px solid rgb(30, 223, 248)");
+        $(".navbar").css("border-bottom", "1px solid rgb(30, 223, 248)");
+        $(".navbar").css("color", "rgb(30, 223, 248)");
+        // $('.navbar').css('box-shadow', '0 0 10px rgb(30, 223, 248) inset');
+      });
+      // ---------m-j-logo
+
+      $(".skrillex-logo").hover(function () {
+        $(".skrillex-box-sh").css(
+          "box-shadow",
+          "0 0 30px rgb(95, 215, 252) inset"
+        );
+        $(".skrillex-box-sh").css("border", "2px solid rgb(0, 255, 72)");
+        $(".navbar").css("border-bottom", "1px solid rgb(0, 255, 72)");
+        $(".navbar").css("color", "rgb(0, 255, 72)");
+        // $('.navbar').css('box-shadow', '0 0 10px rgb(95, 215, 252) inset');
+
+        // ---------muse-logo
+      });
+      $(".michael-jackson-show01-box").hover(function () {
+        $(".mj-bder").css("box-shadow", "0 0 30px white inset");
+        $(".mj-bder").css("border", "2px solid white");
+        $(".navbar").css("border-bottom", "1px solid white");
+        $(".navbar").css("color", "white");
+      });
+      $(".guns-logo").hover(function () {});
+    </script>
+  </body>
+</html>
