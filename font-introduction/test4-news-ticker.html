@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        section .scroll{
+            width: 100%;
+            display: flex;
+        }
+
+        section .scroll div{
+            white-space: nowrap;
+            animation: animate 40s linear infinite;
+        }
+
+        @keyframes animate {
+            0%{
+                transform: translateX(100%);
+            }
+            100%{
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="scroll text1">
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore non beatae quas vitae fuga. Commodi, alias, provident.
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore non beatae quas vitae fuga. Commodi, alias, provident.
+            </div>
+        </div>
+        <div class="scroll text2">
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore non beatae quas vitae fuga. Commodi, alias, provident.
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore non beatae quas vitae fuga. Commodi, alias, provident.
+            </div>
+        </div>
+        <div class="scroll text3">
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore non beatae quas vitae fuga. Commodi, alias, provident.
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore non beatae quas vitae fuga. Commodi, alias, provident.
+            </div>
+        </div>
+        <div class="scroll text4">
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore non beatae quas vitae fuga. Commodi, alias, provident.
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore non beatae quas vitae fuga. Commodi, alias, provident.
+            </div>
+        </div>
+        <div class="scroll text5">
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore non beatae quas vitae fuga. Commodi, alias, provident.
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore non beatae quas vitae fuga. Commodi, alias, provident.
+            </div>
+        </div>
+        <div class="scroll text6">
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore non beatae quas vitae fuga. Commodi, alias, provident.
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore non beatae quas vitae fuga. Commodi, alias, provident.
+            </div>
+        </div>
+    </section>
+</body>
+</html>
