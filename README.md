@@ -4,7 +4,7 @@
 
 | 編號 | 學員 | 專題內容 | 
 | :----: | :----: | :----: | 
-| 01 | 彭紹慈 | [小岩究] [https://Eddie110102.github.io/iSpan-UIUX-midterm/climbing] |
-| 02 | 黃昱潔 | [沾沾字喜] [https://Eddie110102.github.io/iSpan-UIUX-midterm/font-introction] |
-| 03 | 王祐翔 | [黑膠唱片] [https://Eddie110102.github.io/iSpan-UIUX-midterm/wevinyl] |
-| 04 | 王庭笠 | [音樂] [https://Eddie110102.github.io/iSpan-UIUX-midterm/musics] |
+| 01 | 彭紹慈 | [小岩究] (https://Eddie110102.github.io/iSpan-UIUX-midterm/climbing) |
+| 02 | 黃昱潔 | [沾沾字喜] (https://Eddie110102.github.io/iSpan-UIUX-midterm/font-introction) |
+| 03 | 王祐翔 | [黑膠唱片] (https://Eddie110102.github.io/iSpan-UIUX-midterm/wevinyl) |
+| 04 | 王庭笠 | [音樂] (https://Eddie110102.github.io/iSpan-UIUX-midterm/musics) |
