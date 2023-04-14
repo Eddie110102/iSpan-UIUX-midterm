@@ -44,6 +44,7 @@ h1 {
 .content:hover>p {
     font-size: 0;
     color: transparent;
+    text-shadow: 2px 2px 2px transparent;
 }
 
 .card {
